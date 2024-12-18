@@ -1,37 +1,63 @@
 {
   "name": "NImageGroup",
   "props": {
-    "show-toolbar": {
+    ":render-toolbar": {
+      "description": "工具栏的渲染函数",
+      "description_zh": "工具栏的渲染函数",
+      "default": "undefined",
       "value": "",
-      "description": "Whether to display the bottom toolbar after the image is enlarged",
+      "type": "(props: { nodes: { prev: VNode, next: VNode, rotateCounterclockwise: VNode, rotateClockwise: VNode, resizeToOriginalSize: VNode, zoomOut: VNode, zoomIn: VNode, download: VNode, close: VNode } }) => VNodeChild",
+      "version": "2.38.2",
+      "required": false
+    },
+    "show-toolbar": {
+      "description": "图片放大后是否展示底部工具栏",
+      "description_zh": "图片放大后是否展示底部工具栏",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "图片放大后是否展示底部工具栏"
+      "version": "",
+      "required": false
     },
     "show-toolbar-tooltip": {
-      "value": "",
-      "description": "Whether or not to display toolbar prompts",
+      "description": "是否展示工具栏的提示",
+      "description_zh": "是否展示工具栏的提示",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示工具栏的提示"
+      "version": "2.24.0",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [
     {
       "name": "preview-prev",
-      "description": "Click on the callback from the previous one",
+      "description": "点击上一张的回调",
+      "description_zh": "点击上一张的回调",
       "params": "() => void",
-      "description_zh": "点击上一张的回调"
+      "version": ""
     },
     {
       "name": "preview-next",
-      "description": "Click on the next callback",
+      "description": "点击下一张的回调",
+      "description_zh": "点击下一张的回调",
       "params": "() => void",
-      "description_zh": "点击下一张的回调"
+      "version": ""
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/image",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/image"
+  "methods": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "图像组的内容",
+      "description_zh": "图像组的内容"
+    }
+  ],
+  "suggestions": [
+    "n-image"
+  ],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/image",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/image",
+  "filename": "ImageGroup",
+  "typeDetail": {}
 }

@@ -2,110 +2,145 @@
   "name": "NTag",
   "props": {
     "bordered": {
-      "value": "",
-      "description": "Whether there is a border or not",
+      "description": "是否有边框",
+      "description_zh": "是否有边框",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否有边框"
+      "version": "",
+      "required": false
     },
     "checkable": {
-      "value": "",
-      "description": "If you can choose whether you want to, the type will not take effect after you use it",
+      "description": "是否可以选择，使用后 type 将不生效",
+      "description_zh": "是否可以选择，使用后 type 将不生效",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否可以选择，使用后 type 将不生效"
+      "version": "",
+      "required": false
     },
     "checked": {
-      "value": "",
-      "description": "Whether it is selected or not, and use it with checkable",
+      "description": "是否被选中，配合 checkable 一起使用",
+      "description_zh": "是否被选中，配合 checkable 一起使用",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否被选中，配合 checkable 一起使用"
+      "version": "",
+      "required": false
     },
     "closable": {
-      "value": "",
-      "description": "Whether it can be turned off",
+      "description": "是否可关闭",
+      "description_zh": "是否可关闭",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否可关闭"
+      "version": "",
+      "required": false
     },
     "color": {
-      "value": "",
-      "description": "Label color, 'type' is invalid when set",
+      "description": "标签颜色，设置该项后 type 无效",
+      "description_zh": "标签颜色，设置该项后 type 无效",
       "default": "undefined",
+      "value": "",
       "type": "{ color?: string, borderColor?: string, textColor?: string }",
-      "description_zh": "标签颜色，设置该项后 `type` 无效"
+      "version": "",
+      "required": false
     },
     "disabled": {
-      "value": "",
-      "description": "Whether to disable or not",
+      "description": "是否禁用",
+      "description_zh": "是否禁用",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否禁用"
+      "version": "",
+      "required": false
     },
     "round": {
-      "value": "",
-      "description": "Whether the corners are rounded or not",
+      "description": "是否圆角",
+      "description_zh": "是否圆角",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否圆角"
+      "version": "",
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "size",
+      "description": "尺寸",
+      "description_zh": "尺寸",
       "default": "medium",
+      "value": "",
       "type": "small / medium / large",
-      "description_zh": "尺寸"
+      "version": "",
+      "required": false
     },
     "strong": {
-      "value": "",
-      "description": "Whether the text is in bold or not",
+      "description": "文字是否加粗",
+      "description_zh": "文字是否加粗",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "文字是否加粗"
+      "version": "2.30.0",
+      "required": false
     },
     "trigger-click-on-close": {
-      "value": "",
-      "description": "Whether or not to trigger a click event when closed",
+      "description": "关闭时是否触发点击事件",
+      "description_zh": "关闭时是否触发点击事件",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "关闭时是否触发点击事件"
+      "version": "2.32.2",
+      "required": false
     },
     "type": {
-      "value": [
-        "default",
-        "primary",
-        "info",
-        "success",
-        "warning",
-        "error"
-      ],
-      "description": "type",
+      "description": "类型",
+      "description_zh": "类型",
       "default": "default",
+      "value": "",
       "type": "default / primary / info / success / warning / error",
-      "description_zh": "类型"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [
     {
       "name": "close",
-      "description": "Click the callback on closing",
+      "description": "点击关闭时的回调",
+      "description_zh": "点击关闭时的回调",
       "params": "(e: MouseEvent) => void",
-      "description_zh": "点击关闭时的回调"
+      "version": ""
     },
     {
       "name": "update:checked",
-      "description": "Select a callback when the status changes",
+      "description": "选择状态更改时的回调",
+      "description_zh": "选择状态更改时的回调",
       "params": "(value: boolean) => void",
-      "description_zh": "选择状态更改时的回调"
+      "version": ""
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/tag",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/tag"
+  "methods": [],
+  "slots": [
+    {
+      "name": "avatar",
+      "description": "标签中的头像",
+      "description_zh": "标签中的头像",
+      "version": ""
+    },
+    {
+      "name": "default",
+      "description": "标签内容",
+      "description_zh": "标签内容",
+      "version": ""
+    },
+    {
+      "name": "icon",
+      "description": "标签中的图标",
+      "description_zh": "标签中的图标",
+      "version": "2.30.0"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/tag",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/tag",
+  "filename": "Tag",
+  "typeDetail": {}
 }

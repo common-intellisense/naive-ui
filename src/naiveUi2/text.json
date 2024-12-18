@@ -2,75 +2,76 @@
   "name": "NText",
   "props": {
     "type": {
-      "value": [
-        "default",
-        "success",
-        "info",
-        "warning",
-        "error"
-      ],
-      "description": "Type of typography",
+      "description": "排印类型",
+      "description_zh": "排印类型",
       "default": "default",
+      "value": "",
       "type": "default / success / info / warning / error",
-      "description_zh": "排印类型"
+      "required": false
     },
     "strong": {
-      "value": "",
-      "description": "Bold",
+      "description": "粗体",
+      "description_zh": "粗体",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "粗体"
+      "required": false
     },
     "italic": {
-      "value": "",
-      "description": "italic",
+      "description": "斜体",
+      "description_zh": "斜体",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "斜体"
+      "required": false
     },
     "underline": {
-      "value": "",
-      "description": "Text underlined",
+      "description": "文字下划线",
+      "description_zh": "文字下划线",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "文字下划线"
+      "required": false
     },
     "delete": {
-      "value": "",
-      "description": "Text strikethrough",
+      "description": "文字删除线",
+      "description_zh": "文字删除线",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "文字删除线"
+      "required": false
     },
     "code": {
-      "value": "",
-      "description": "Code patterns",
+      "description": "代码模式",
+      "description_zh": "代码模式",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "代码模式"
+      "required": false
     },
     "depth": {
-      "value": [
-        "1",
-        "2",
-        "3"
-      ],
-      "description": "Text depth",
+      "description": "文字深度",
+      "description_zh": "文字深度",
       "default": "undefined",
-      "type": "1 / 2 / 3",
-      "description_zh": "文字深度"
+      "value": "",
+      "type": "1 / 2 / 3 / 1 / 2 / 3",
+      "required": false
     },
     "tag": {
-      "value": "",
-      "description": "The Why tag that needs to be rendered does not take effect when the 'code' and 'del' settings are set",
+      "description": "需要被渲染为什么标签，在 code 和 del 设定的情况下不生效",
+      "description_zh": "需要被渲染为什么标签，在 code 和 del 设定的情况下不生效",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "需要被渲染为什么标签，在 `code` 和 `del` 设定的情况下不生效"
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/typography",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/typography"
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/typography",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/typography",
+  "filename": "Text",
+  "typeDetail": {}
 }

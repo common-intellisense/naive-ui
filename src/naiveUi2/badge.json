@@ -2,79 +2,99 @@
   "name": "NBadge",
   "props": {
     "color": {
-      "value": "",
-      "description": "The color of the marker",
+      "description": "标记的颜色",
+      "description_zh": "标记的颜色",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "标记的颜色"
+      "version": "",
+      "required": false
     },
     "dot": {
-      "value": "",
-      "description": "Whether the marker is displayed as a dot",
+      "description": "标记是否显示为点",
+      "description_zh": "标记是否显示为点",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "标记是否显示为点"
+      "version": "",
+      "required": false
     },
     ":max": {
-      "value": "",
-      "description": "Mark the maximum number to handle overflow cases",
+      "description": "标记最大数来处理溢出情况",
+      "description_zh": "标记最大数来处理溢出情况",
       "default": "undefined",
+      "value": "",
       "type": "number",
-      "description_zh": "标记最大数来处理溢出情况"
+      "version": "",
+      "required": false
     },
-    ":offset": {
-      "value": "",
-      "description": "The offset from the default position to the left, above",
+    "offset": {
+      "description": "距默认位置左侧、上方的偏移量",
+      "description_zh": "距默认位置左侧、上方的偏移量",
       "default": "undefined",
+      "value": "",
       "type": "[string | number, string | number]",
-      "description_zh": "距默认位置左侧、上方的偏移量"
+      "version": "2.34.3",
+      "required": false
     },
     "processing": {
-      "value": "",
-      "description": "The marker shows the progress",
+      "description": "标记显示进度",
+      "description_zh": "标记显示进度",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "标记显示进度"
+      "version": "",
+      "required": false
     },
     "show-zero": {
-      "value": "",
-      "description": "Whether to display when marked as 0",
+      "description": "标记为 0 时是否显示",
+      "description_zh": "标记为 0 时是否显示",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "标记为 0 时是否显示"
+      "version": "",
+      "required": false
     },
     "show": {
-      "value": "",
-      "description": "Marked controlled display",
+      "description": "标记受控显示",
+      "description_zh": "标记受控显示",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "标记受控显示"
+      "version": "",
+      "required": false
     },
     "type": {
-      "value": [
-        "default",
-        "success",
-        "error",
-        "warning",
-        "info"
-      ],
-      "description": "Tag display type",
+      "description": "标记显示类型",
+      "description_zh": "标记显示类型",
       "default": "default",
-      "type": "default / success / error / warning / info",
-      "description_zh": "标记显示类型"
-    },
-    ":value": {
       "value": "",
-      "description": "Number of tags",
-      "default": "undefined",
-      "type": "string | number",
+      "type": "default / success / error / warning / info",
+      "version": "",
+      "required": false
+    },
+    "value": {
+      "description": "标记数量",
       "description_zh": "标记数量",
+      "default": "undefined",
+      "value": "",
+      "type": "string | number",
+      "version": "",
       "required": true
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/badge",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/badge"
+  "methods": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "标记内填充的内容",
+      "description_zh": "标记内填充的内容"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/badge",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/badge",
+  "filename": "Badge",
+  "typeDetail": {}
 }

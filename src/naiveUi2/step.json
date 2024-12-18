@@ -2,44 +2,67 @@
   "name": "NStep",
   "props": {
     "description": {
-      "value": "",
-      "description": "Node description",
-      "default": "undefined",
-      "type": "string",
+      "description": "节点描述",
       "description_zh": "节点描述",
-      "required": true
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
+      "required": false
     },
     "disabled": {
-      "value": "",
-      "description": "Clickable",
+      "description": "是否可点击",
+      "description_zh": "是否可点击",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否可点击"
+      "version": "2.29.1",
+      "required": false
     },
     "status": {
-      "value": [
-        "process",
-        "finish",
-        "error",
-        "wait"
-      ],
-      "description": "Node status",
+      "description": "节点状态",
+      "description_zh": "节点状态",
       "default": "undefined",
+      "value": "",
       "type": "process / finish / error / wait",
-      "description_zh": "节点状态"
+      "version": "",
+      "required": false
     },
     "title": {
-      "value": "",
-      "description": "Node title",
-      "default": "undefined",
-      "type": "string",
+      "description": "节点标题",
       "description_zh": "节点标题",
-      "required": true
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/steps",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/steps"
+  "methods": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "步骤节点内容",
+      "description_zh": "步骤节点内容",
+      "version": ""
+    },
+    {
+      "name": "icon",
+      "description": "步骤节点图标",
+      "description_zh": "步骤节点图标",
+      "version": "2.26.1"
+    },
+    {
+      "name": "title",
+      "description": "步骤节点标题",
+      "description_zh": "步骤节点标题",
+      "version": ""
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/steps",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/steps",
+  "filename": "Step",
+  "typeDetail": {}
 }

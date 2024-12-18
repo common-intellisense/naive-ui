@@ -2,55 +2,60 @@
   "name": "NTable",
   "props": {
     "bottom-bordered": {
-      "value": "",
-      "description": "Whether there is a border at the bottom of the table, which is invalid when 'bordered' is 'true'",
+      "description": "表格底部是否有边框，在 bordered 为 true 时该参数无效",
+      "description_zh": "表格底部是否有边框，在 bordered 为 true 时该参数无效",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "表格底部是否有边框，在 `bordered` 为 `true` 时该参数无效"
+      "required": false
     },
     "bordered": {
-      "value": "",
-      "description": "Whether or not to display a border",
+      "description": "是否显示边框",
+      "description_zh": "是否显示边框",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示边框"
+      "required": false
     },
     "single-column": {
-      "value": "",
-      "description": "Whether or not to set the dividing line of the row, when the parameter is 'true', the cell does not have a lower edge line",
+      "description": "是否不设定行的分割线，当参数为true时，则单元格没有下边线",
+      "description_zh": "是否不设定行的分割线，当参数为true时，则单元格没有下边线",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否不设定行的分割线，当参数为`true`时，则单元格没有下边线"
+      "required": false
     },
     "single-line": {
-      "value": "",
-      "description": "Whether or not to set the dividing line of the column, when the parameter value is 'true', the cell does not have a right edge",
+      "description": "是否不设定列的分割线，当参数值为 true 时，则单元格没有右边线",
+      "description_zh": "是否不设定列的分割线，当参数值为 true 时，则单元格没有右边线",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否不设定列的分割线，当参数值为 `true` 时，则单元格没有右边线"
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "Table size",
+      "description": "表格尺寸大小",
+      "description_zh": "表格尺寸大小",
       "default": "medium",
+      "value": "",
       "type": "small / medium / large",
-      "description_zh": "表格尺寸大小"
+      "required": false
     },
     "striped": {
-      "value": "",
-      "description": "Whether or not to use zebra stripes",
+      "description": "是否使用斑马线条纹",
+      "description_zh": "是否使用斑马线条纹",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否使用斑马线条纹"
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/table",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/table"
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/table",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/table",
+  "filename": "Table",
+  "typeDetail": {}
 }

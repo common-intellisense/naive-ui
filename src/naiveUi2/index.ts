@@ -1,20 +1,21 @@
-import { getComponentMap, getPropsMap } from './mapping'
+import { getComponentsMap, getPropsMap } from './mapping'
+// import directives from '../directives.json'
 
 export function naiveUi2() {
   return {
-    uiName: 'naive-ui2',
-    map: getPropsMap(),
+    uiName: 'naive-ui',
     lib: 'naive-ui',
-    prefix: 'n',
+    map: getPropsMap(),
   }
 }
 
-export function naiveUi2Components(isZh: boolean) {
+export function naiveUi2Components() {
   return {
-    map: getComponentMap(isZh),
+    map: getComponentsMap(),
     isSeperatorByHyphen: true,
     prefix: 'n',
-    lib: 'naive-ui',
     isReact: false,
+    lib: 'naive-ui',
+    // directives: directives.naiveUi2,
   }
 }

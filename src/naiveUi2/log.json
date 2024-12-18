@@ -2,98 +2,110 @@
   "name": "NLog",
   "props": {
     ":font-size": {
-      "value": "",
-      "description": "Text size",
+      "description": "文字大小",
+      "description_zh": "文字大小",
       "default": "14",
-      "type": "number",
-      "description_zh": "文字大小"
-    },
-    ":hljs": {
       "value": "",
-      "description": "If you want to set 'hljs' locally, you can pass this property to the component",
+      "type": "number",
+      "required": false
+    },
+    "hljs": {
+      "description": "如果你想局部设定 hljs ，可以通过这个属性传给组件",
+      "description_zh": "如果你想局部设定 hljs ，可以通过这个属性传给组件",
       "default": "undefined",
+      "value": "",
       "type": "Object",
-      "description_zh": "如果你想局部设定 `hljs` ，可以通过这个属性传给组件"
+      "required": false
     },
     "language": {
-      "value": "",
-      "description": "The language in which the logs are in 'highlightjs'",
+      "description": "日志在 highlightjs 中的语言",
+      "description_zh": "日志在 highlightjs 中的语言",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "日志在 `highlightjs` 中的语言"
+      "required": false
     },
     ":line-height": {
-      "value": "",
-      "description": "Row height",
+      "description": "行高",
+      "description_zh": "行高",
       "default": "1.25",
+      "value": "",
       "type": "number",
-      "description_zh": "行高"
+      "required": false
     },
     ":lines": {
-      "value": "",
-      "description": "Displays the log content by row, which is invalid when the 'log' parameter is also present",
+      "description": "按行显示日志内容，在同时存在 log 参数时，该参数无效",
+      "description_zh": "按行显示日志内容，在同时存在 log 参数时，该参数无效",
       "default": "undefined",
+      "value": "",
       "type": "Array<string>",
-      "description_zh": "按行显示日志内容，在同时存在 `log` 参数时，该参数无效"
+      "required": false
     },
     "loading": {
-      "value": "",
-      "description": "Whether or not it is loading",
+      "description": "是否显示加载中",
+      "description_zh": "是否显示加载中",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示加载中"
+      "required": false
     },
     "log": {
-      "value": "",
-      "description": "The contents of the log",
+      "description": "日志的内容",
+      "description_zh": "日志的内容",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "日志的内容"
+      "required": true
     },
     ":rows": {
-      "value": "",
-      "description": "The size of the log",
+      "description": "日志的尺寸",
+      "description_zh": "日志的尺寸",
       "default": "15",
+      "value": "",
       "type": "number",
-      "description_zh": "日志的尺寸"
+      "required": false
     },
     "trim": {
-      "value": "",
-      "description": "Whether or not to display the log after 'trim'",
+      "description": "是否显示 trim 后的日志",
+      "description_zh": "是否显示 trim 后的日志",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示 `trim` 后的日志"
+      "required": false
     }
   },
-  "methods": [
-    {
-      "name": "scrollTo",
-      "description": "Callback function for scrolling events",
-      "params": "滚动事件的回调函数",
-      "description_zh": "滚动事件的回调函数"
-    }
-  ],
-  "typeDetail": {},
   "events": [
     {
       "name": "require-more",
-      "description": "Callback function for rolling load logs",
-      "params": "(from: top | bottom) => void",
-      "description_zh": "滚动加载日志的回调函数"
+      "description": "滚动加载日志的回调函数",
+      "description_zh": "滚动加载日志的回调函数",
+      "params": "(from: 'top' | 'bottom') => void"
     },
     {
       "name": "reach-top",
-      "description": "Scroll to the callback function at the top",
-      "params": "() => void",
-      "description_zh": "滚动到顶部的回调函数"
+      "description": "滚动到顶部的回调函数",
+      "description_zh": "滚动到顶部的回调函数",
+      "params": "() => void"
     },
     {
       "name": "reach-bottom",
-      "description": "Scroll to the callback function at the bottom",
-      "params": "() => void",
-      "description_zh": "滚动到底部的回调函数"
+      "description": "滚动到底部的回调函数",
+      "description_zh": "滚动到底部的回调函数",
+      "params": "() => void"
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/log",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/log"
+  "methods": [
+    {
+      "name": "scrollTo",
+      "description": "滚动事件的回调函数",
+      "description_zh": "滚动事件的回调函数",
+      "params": "(options: { top?: number, position?: 'top' | 'bottom', silent?: boolean })"
+    }
+  ],
+  "slots": [],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/log",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/log",
+  "filename": "Log",
+  "typeDetail": {}
 }

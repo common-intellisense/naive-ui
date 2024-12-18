@@ -2,219 +2,227 @@
   "name": "NMention",
   "props": {
     "autosize": {
-      "value": "",
-      "description": "word wrap",
+      "description": "自动换行",
+      "description_zh": "自动换行",
       "default": "false",
+      "value": "",
       "type": "boolean | { maxRows?: number, minRows?: number }",
-      "description_zh": "自动换行"
+      "version": "",
+      "required": false
     },
     ":options": {
-      "value": "",
-      "description": "List of options",
-      "default": "[]",
-      "type": "MentionOption[]",
+      "description": "选项列表",
       "description_zh": "选项列表",
+      "default": "[]",
+      "value": "",
+      "type": "MentionOption[]",
+      "version": "",
       "required": true
     },
     "type": {
-      "value": ["text", "textarea"],
-      "description": "Enter the type of field",
+      "description": "输入框类型",
+      "description_zh": "输入框类型",
       "default": "text",
+      "value": "",
       "type": "text / textarea",
-      "description_zh": "输入框类型"
+      "version": "",
+      "required": false
     },
     "separator": {
-      "value": "",
-      "description": "The character used for the split mention must be 1 in length",
+      "description": "切分提及使用的字符，长度必须为 1",
+      "description_zh": "切分提及使用的字符，长度必须为 1",
       "default": " ",
+      "value": "",
       "type": "string",
-      "description_zh": "切分提及使用的字符，长度必须为 1"
+      "version": "",
+      "required": false
     },
     "bordered": {
-      "value": "",
-      "description": "Whether to display the input box border",
+      "description": "是否显示输入框边框",
+      "description_zh": "是否显示输入框边框",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示输入框边框"
+      "version": "",
+      "required": false
     },
     "disabled": {
-      "value": "",
-      "description": "Whether to set the input field to a disabled state",
+      "description": "是否设置输入框为禁用状态",
+      "description_zh": "是否设置输入框为禁用状态",
       "default": "false",
-      "type": "boolean",
-      "description_zh": "是否设置输入框为禁用状态"
-    },
-    "value": {
       "value": "",
-      "description": "Enter a value for the field",
-      "default": "undefined",
-      "type": "string | null",
-      "description_zh": "输入框的值"
+      "type": "boolean",
+      "version": "",
+      "required": false
     },
     "default-value": {
-      "value": "",
-      "description": "The default value for the input box",
+      "description": "输入框的默认值",
+      "description_zh": "输入框的默认值",
       "default": "",
+      "value": "",
       "type": "string",
-      "description_zh": "输入框的默认值"
+      "version": "",
+      "required": false
+    },
+    ":filter": {
+      "description": "根据 pattern 决定显示那些选项的过滤函数",
+      "description_zh": "根据 pattern 决定显示那些选项的过滤函数",
+      "default": "内置的过滤函数",
+      "value": "",
+      "type": "(pattern: string, option: MentionOption) => boolean",
+      "version": "2.38.2",
+      "required": false
     },
     "loading": {
-      "value": "",
-      "description": "Select whether the panel displays the loading status",
+      "description": "选择面板是否显示加载状态",
+      "description_zh": "选择面板是否显示加载状态",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "选择面板是否显示加载状态"
+      "version": "",
+      "required": false
     },
     "prefix": {
-      "value": "",
-      "description": "The trigger mentioned prefix must be 1 in length",
+      "description": "触发提及的前缀，长度必须为 1",
+      "description_zh": "触发提及的前缀，长度必须为 1",
       "default": "@",
+      "value": "",
       "type": "string | string[]",
-      "description_zh": "触发提及的前缀，长度必须为 1"
+      "version": "",
+      "required": false
     },
     "placeholder": {
-      "value": "",
-      "description": "A placeholder for the input box",
+      "description": "输入框的占位符",
+      "description_zh": "输入框的占位符",
       "default": "",
+      "value": "",
       "type": "string",
-      "description_zh": "输入框的占位符"
+      "version": "",
+      "required": false
     },
     "placement": {
-      "value": [
-        "top-start",
-        "top",
-        "top-end",
-        "right-start",
-        "right",
-        "right-end",
-        "bottom-start",
-        "bottom",
-        "bottom-end",
-        "left-start",
-        "left",
-        "left-end"
-      ],
-      "description": "Select the pop-up location of the panel.",
+      "description": "选择面板的弹出位置.",
+      "description_zh": "选择面板的弹出位置.",
       "default": "bottom-start",
-      "type": "top-start / top / top-end / right-start / right / right-end / bottom-start / bottom / bottom-end / left-start / left / left-end",
-      "description_zh": "选择面板的弹出位置."
-    },
-    "render-label": {
       "value": "",
-      "description": "Option label rendering function",
+      "type": "top-start / top / top-end / right-start / right / right-end / bottom-start / bottom / bottom-end / left-start / left / left-end",
+      "version": "2.25.0",
+      "required": false
+    },
+    ":render-label": {
+      "description": "选项标签渲染函数",
+      "description_zh": "选项标签渲染函数",
       "default": "undefined",
+      "value": "",
       "type": "(option: MentionOption) => VNodeChild",
-      "description_zh": "选项标签渲染函数"
+      "version": "",
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "The size of the input box",
+      "description": "输入框的大小",
+      "description_zh": "输入框的大小",
       "default": "medium",
+      "value": "",
       "type": "small / medium / large",
-      "description_zh": "输入框的大小"
+      "version": "",
+      "required": false
     },
     "status": {
-      "value": [
-        "success",
-        "warning",
-        "error"
-      ],
-      "description": "Verify the status",
+      "description": "验证状态",
+      "description_zh": "验证状态",
       "default": "undefined",
+      "value": "",
       "type": "success / warning / error",
-      "description_zh": "验证状态"
+      "version": "2.27.0",
+      "required": false
     },
     "to": {
-      "value": "",
-      "description": "menu's container node, 'false' will stay put",
+      "description": "菜单的容器节点，false 会待在原地",
+      "description_zh": "菜单的容器节点，false 会待在原地",
       "default": "body",
+      "value": "",
       "type": "string | HTMLElement | false",
-      "description_zh": "菜单的容器节点，`false` 会待在原地"
+      "version": "",
+      "required": false
+    },
+    "value": {
+      "description": "输入框的值",
+      "description_zh": "输入框的值",
+      "default": "undefined",
+      "value": "",
+      "type": "string | null",
+      "version": "",
+      "required": false
     }
   },
-  "methods": [
+  "events": [
+    {
+      "name": "update:show",
+      "description": "选择面板显示状态发生变化时触发",
+      "description_zh": "选择面板显示状态发生变化时触发",
+      "params": "(show: boolean) => void",
+      "version": "2.34.0"
+    },
+    {
+      "name": "update:value",
+      "description": "输入框值发生更新时触发",
+      "description_zh": "输入框值发生更新时触发",
+      "params": "(value: string) => void",
+      "version": ""
+    },
+    {
+      "name": "select",
+      "description": "输入框的选中时触发",
+      "description_zh": "输入框的选中时触发",
+      "params": "(option: MentionOption, prefix: string) => void",
+      "version": ""
+    },
     {
       "name": "focus",
-      "description": "() => void",
-      "params": "聚焦",
-      "description_zh": "（） => void"
+      "description": "输入框获得焦点时触发",
+      "description_zh": "输入框获得焦点时触发",
+      "params": "(e: FocusEvent) => void",
+      "version": ""
+    },
+    {
+      "name": "search",
+      "description": "输入框搜索时触发",
+      "description_zh": "输入框搜索时触发",
+      "params": "(pattern: string, prefix: string) => void",
+      "version": ""
     },
     {
       "name": "blur",
-      "description": "() => void",
-      "params": "失焦",
-      "description_zh": "（） => void"
+      "description": "输入框失去焦点时触发",
+      "description_zh": "输入框失去焦点时触发",
+      "params": "(e: FocusEvent) => void",
+      "version": ""
     }
   ],
-  "typeDetail": {
-    "MentionOption": [
-      {
-        "name": "class",
-        "description": "选项的自定义类名",
-        "type": "string"
-      },
-      {
-        "name": "disabled",
-        "description": "选项是否禁用",
-        "type": "boolean"
-      },
-      {
-        "name": "label",
-        "description": "选项的标签",
-        "type": "string | (option: MentionOption) => VNodeChild"
-      },
-      {
-        "name": "render",
-        "description": "支持通过 `render` 渲染函数自定义选项",
-        "type": "(option: MentionOption) => VNodeChild"
-      },
-      {
-        "name": "style",
-        "description": "选项的样式",
-        "type": "string"
-      },
-      {
-        "name": "value",
-        "description": "在选项中应该是唯一的",
-        "type": "string"
-      }
-    ]
-  },
-  "events": [{
-    "name": "update:show",
-    "description": "Trigger when the display status of the selection panel changes",
-    "params": "(show: boolean) => void",
-    "description_zh": "选择面板显示状态发生变化时触发"
-  }, {
-    "name": "update:value",
-    "description": "Triggered when the value of the input box is updated",
-    "params": "(value: string) => void",
-    "description_zh": "输入框值发生更新时触发"
-  }, {
-    "name": "select",
-    "description": "Triggered when the input box is selected",
-    "params": "(option: MentionOption, prefix: string) => void",
-    "description_zh": "输入框的选中时触发"
-  }, {
-    "name": "focus",
-    "description": "Triggers when the input box gains focus",
-    "params": "(e: FocusEvent) => void",
-    "description_zh": "输入框获得焦点时触发"
-  }, {
-    "name": "search",
-    "description": "Triggered when the input box is searched",
-    "params": "(pattern: string, prefix: string) => void",
-    "description_zh": "输入框搜索时触发"
-  }, {
-    "name": "blur",
-    "description": "Triggered when the input box loses focus",
-    "params": "(e: FocusEvent) => void",
-    "description_zh": "输入框失去焦点时触发"
-  }],
-  "link": "https://www.naiveui.com/en-US/dark/components/mention",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/mention"
+  "methods": [
+    {
+      "name": "focus",
+      "description": "聚焦",
+      "description_zh": "聚焦",
+      "params": "() => void"
+    },
+    {
+      "name": "blur",
+      "description": "失焦",
+      "description_zh": "失焦",
+      "params": "() => void"
+    }
+  ],
+  "slots": [
+    {
+      "name": "empty",
+      "description": "菜单无数据时的 slot",
+      "description_zh": "菜单无数据时的 slot"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/mention#Mention-Props",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/mention#Mention-Props",
+  "filename": "Mention",
+  "typeDetail": {}
 }

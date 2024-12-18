@@ -2,68 +2,77 @@
   "name": "NAnchor",
   "props": {
     "affix": {
-      "value": "",
-      "description": "Whether the anchor is displayed like an Affix, and if set to 'true', it will also accept Props from [Affix](affix#affix-props).",
+      "description": "Anchor 是否像 Affix 一样展示，如果设定为 true，它还会接受 Affix 的 Props",
+      "description_zh": "Anchor 是否像 Affix 一样展示，如果设定为 true，它还会接受 Affix 的 Props",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "Anchor 是否像 Affix 一样展示，如果设定为 `true`，它还会接受 [Affix](affix#Affix-Props) 的 Props"
+      "required": false
     },
     ":bound": {
-      "value": "",
-      "description": "element starts triggering the anchor's offset",
+      "description": "元素开始触发 anchor 的偏移量",
+      "description_zh": "元素开始触发 anchor 的偏移量",
       "default": "12",
+      "value": "",
       "type": "number",
-      "description_zh": "元素开始触发 anchor 的偏移量"
+      "required": false
     },
     "ignore-gap": {
-      "value": "",
-      "description": "If set to true, the navigation will be displayed in the exact href area",
+      "description": "如果设定为 true, 导航将显示在准确的 href 区域",
+      "description_zh": "如果设定为 true, 导航将显示在准确的 href 区域",
       "default": "false",
-      "type": "boolean",
-      "description_zh": "如果设定为 true, 导航将显示在准确的 href 区域"
-    },
-    "offset-target": {
       "value": "",
-      "description": "Calculates elements or selectors whose offset positions are relative. If you're scrolling not through the entire document but just a portion of it, you may want to set this up",
+      "type": "boolean",
+      "required": false
+    },
+    ":offset-target": {
+      "description": "计算偏移位置相对的元素或选择器。如果你滚动的不是整个文档而只是其中的一部分，那你有可能要设定这个",
+      "description_zh": "计算偏移位置相对的元素或选择器。如果你滚动的不是整个文档而只是其中的一部分，那你有可能要设定这个",
       "default": "document",
+      "value": "",
       "type": "string | HTMLElement | Window | Document | (() => HTMLElement)",
-      "description_zh": "计算偏移位置相对的元素或选择器。如果你滚动的不是整个文档而只是其中的一部分，那你有可能要设定这个"
+      "required": false
     },
     "show-rail": {
-      "value": "",
-      "description": "Whether or not to show the tracks on the side",
+      "description": "是否展示侧面的轨道",
+      "description_zh": "是否展示侧面的轨道",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示侧面的轨道"
+      "required": false
     },
     "show-background": {
-      "value": "",
-      "description": "Whether or not to display the background of the link",
+      "description": "是否展示 link 的背景",
+      "description_zh": "是否展示 link 的背景",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示 link 的背景"
+      "required": false
     },
     "type": {
-      "value": [
-        "rail",
-        "block"
-      ],
-      "description": "Anchor style, block is block style, rail is track style",
+      "description": "Anchor 的风格，'block' 为块状风格，'rail' 为轨道风格",
+      "description_zh": "Anchor 的风格，'block' 为块状风格，'rail' 为轨道风格",
       "default": "rail",
-      "type": "rail | block",
-      "description_zh": "Anchor 的风格，block 为块状风格，rail 为轨道风格"
+      "value": "",
+      "type": "rail / block",
+      "required": false
     }
   },
+  "events": [],
   "methods": [
     {
       "name": "scrollTo",
-      "description": "Manually trigger to the specified scroll position",
-      "params": "(href: string) => void",
-      "description_zh": "手动触发到指定滚动位置"
+      "description": "手动触发到指定滚动位置",
+      "description_zh": "手动触发到指定滚动位置",
+      "params": "(href: string) => void"
     }
   ],
-  "typeDetail": {},
-  "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/anchor",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/anchor"
+  "slots": [],
+  "suggestions": [
+    "n-anchor-link"
+  ],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/anchor",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/anchor",
+  "filename": "Anchor",
+  "typeDetail": {}
 }

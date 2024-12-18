@@ -2,38 +2,36 @@
   "name": "NH6",
   "props": {
     "align-text": {
-      "value": "",
-      "description": "Text alignment",
+      "description": "文本对齐",
+      "description_zh": "文本对齐",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "文本对齐"
+      "required": false
     },
     "type": {
-      "value": [
-        "default",
-        "success",
-        "info",
-        "warning",
-        "error"
-      ],
-      "description": "Type of typography",
+      "description": "排印类型",
+      "description_zh": "排印类型",
       "default": "default",
+      "value": "",
       "type": "default / success / info / warning / error",
-      "description_zh": "排印类型"
+      "required": false
     },
     "prefix": {
-      "value": [
-        "bar"
-      ],
-      "description": "Displays a bar at the beginning of the word",
+      "description": "在字首显示条块",
+      "description_zh": "在字首显示条块",
       "default": "undefined",
+      "value": "",
       "type": "bar",
-      "description_zh": "在字首显示条块"
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/typography",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/typography"
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/typography",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/typography",
+  "filename": "H6",
+  "typeDetail": {}
 }

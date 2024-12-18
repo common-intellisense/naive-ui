@@ -2,30 +2,50 @@
   "name": "NBreadcrumbItem",
   "props": {
     "clickable": {
-      "value": "",
-      "description": "Clickable",
+      "description": "是否可点击",
+      "description_zh": "是否可点击",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否可点击"
+      "version": "2.30.0",
+      "required": false
     },
     "href": {
-      "value": "",
-      "description": "Link",
+      "description": "链接地址",
+      "description_zh": "链接地址",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "链接地址"
+      "version": "",
+      "required": false
     },
     "separator": {
-      "value": "",
-      "description": "Separator between breadcrumb children",
+      "description": "面包屑子项之间的分隔符",
+      "description_zh": "面包屑子项之间的分隔符",
       "default": "/",
+      "value": "",
       "type": "string",
-      "description_zh": "面包屑子项之间的分隔符"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/breadcrumb",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/breadcrumb"
+  "methods": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "BreadcrumbItem 默认填充的内容",
+      "description_zh": "BreadcrumbItem 默认填充的内容"
+    },
+    {
+      "name": "separator",
+      "description": "分隔符填充的内容",
+      "description_zh": "分隔符填充的内容"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/breadcrumb#Breadcrumb-Item-Slots",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/breadcrumb#Breadcrumb-Item-Slots",
+  "filename": "BreadcrumbItem",
+  "typeDetail": {}
 }

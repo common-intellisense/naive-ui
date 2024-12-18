@@ -2,201 +2,225 @@
   "name": "NFormItem",
   "props": {
     "feedback": {
-      "value": "",
-      "description": "Feedback for the entry. If it is not set to 'undefined', the result of the rule validation will be overwritten",
+      "description": "表项的反馈信息。不设为 undefined 时，会覆盖规则验证的结果",
+      "description_zh": "表项的反馈信息。不设为 undefined 时，会覆盖规则验证的结果",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "表项的反馈信息。不设为 `undefined` 时，会覆盖规则验证的结果"
+      "version": "",
+      "required": false
+    },
+    "feedback-class": {
+      "description": "反馈校验竖向展示定位",
+      "description_zh": "反馈校验竖向展示定位",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.38.2",
+      "required": false
+    },
+    "feedback-style": {
+      "description": "反馈校验横向展示定位",
+      "description_zh": "反馈校验横向展示定位",
+      "default": "undefined",
+      "value": "",
+      "type": "string | object",
+      "version": "2.38.2",
+      "required": false
     },
     "first": {
-      "value": "",
-      "description": "Whether to show only the first error message",
+      "description": "是否只展示首个出错信息",
+      "description_zh": "是否只展示首个出错信息",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否只展示首个出错信息"
+      "version": "",
+      "required": false
     },
     "ignore-path-change": {
-      "value": "",
-      "description": "Usually a change in 'path' will cause a change in the data source, so naive-ui will clear the verification information. If you don't expect this behavior, you can make it true",
+      "description": "通常 path 的改变会导致数据来源的变化，所以 naive-ui 会清空验证信息。如果不期望这个行为，可以将其置为 true",
+      "description_zh": "通常 path 的改变会导致数据来源的变化，所以 naive-ui 会清空验证信息。如果不期望这个行为，可以将其置为 true",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "通常 `path` 的改变会导致数据来源的变化，所以 naive-ui 会清空验证信息。如果不期望这个行为，可以将其置为 true"
+      "version": "",
+      "required": false
     },
     "label": {
-      "value": "",
-      "description": "Label information",
-      "default": "undefined",
-      "type": "string",
+      "description": "标签信息",
       "description_zh": "标签信息",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
       "required": true
     },
     "label-align": {
-      "value": [
-        "left",
-        "right"
-      ],
-      "description": "The text alignment of the label. If it is not set, use the 'label-align' of the outer form",
+      "description": "标签的文本对齐方式。如果没有被设定，使用外层表单的 label-align",
+      "description_zh": "标签的文本对齐方式。如果没有被设定，使用外层表单的 label-align",
       "default": "undefined",
+      "value": "",
       "type": "left / right",
-      "description_zh": "标签的文本对齐方式。如果没有被设定，使用外层表单的 `label-align`"
+      "version": "",
+      "required": false
     },
     "label-placement": {
-      "value": [
-        "left",
-        "top"
-      ],
-      "description": "If it is not set, use the 'label-placement' of the outer form",
+      "description": "如果没有被设定，使用外层表单的 label-placement",
+      "description_zh": "如果没有被设定，使用外层表单的 label-placement",
       "default": "undefined",
+      "value": "",
       "type": "left / top",
-      "description_zh": "如果没有被设定，使用外层表单的 `label-placement`"
+      "version": "",
+      "required": false
     },
     "label-style": {
-      "value": "",
-      "description": "The style of the label",
+      "description": "标签的样式",
+      "description_zh": "标签的样式",
       "default": "undefined",
+      "value": "",
       "type": "CSSProperties | string",
-      "description_zh": "标签的样式"
+      "version": "",
+      "required": false
     },
     "label-props": {
-      "value": "",
-      "description": "The attributes of the tag element",
+      "description": "标签元素的属性",
+      "description_zh": "标签元素的属性",
       "default": "undefined",
+      "value": "",
       "type": "LabelHTMLAttributes",
-      "description_zh": "标签元素的属性"
+      "version": "2.24.0",
+      "required": false
     },
     "label-width": {
-      "value": "",
-      "description": "If it is not set, use the 'label-width' of the outer form, auto means that the label width will be adjusted automatically",
+      "description": "如果没有被设定，使用外层表单的 label-width，'auto' 意味着 label width 会被自动调整",
+      "description_zh": "如果没有被设定，使用外层表单的 label-width，'auto' 意味着 label width 会被自动调整",
       "default": "undefined",
-      "type": "number | string | auto",
-      "description_zh": "如果没有被设定，使用外层表单的 `label-width`，auto 意味着 label width 会被自动调整"
+      "value": "",
+      "type": "number / string / auto",
+      "version": "",
+      "required": false
     },
     "path": {
-      "value": "",
-      "description": "The path to collect the values to the outer form 'model' object",
+      "description": "将值收集到外层表单 model 对象的路径",
+      "description_zh": "将值收集到外层表单 model 对象的路径",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "将值收集到外层表单 `model` 对象的路径",
+      "version": "",
       "required": true
     },
     ":rule": {
-      "value": "",
-      "description": "The rule that validates the entry, it will be merged with the rule obtained from the outer form via 'rule-path' to form the validation rule for the entry. It is recommended to set all the rules in the outer form",
+      "description": "验证表项的规则，它会被通过 rule-path 从外层表单获取的规则合并来作为表项的验证规则。推荐还是在外层表单设置所有规则",
+      "description_zh": "验证表项的规则，它会被通过 rule-path 从外层表单获取的规则合并来作为表项的验证规则。推荐还是在外层表单设置所有规则",
       "default": "undefined",
+      "value": "",
       "type": "FormItemRule | Array<FormItemRule>",
-      "description_zh": "验证表项的规则，它会被通过 `rule-path` 从外层表单获取的规则合并来作为表项的验证规则。推荐还是在外层表单设置所有规则"
+      "version": "",
+      "required": false
     },
     "rule-path": {
-      "value": "",
-      "description": "Get the path to the rule from the 'rules' object of the outer form. If not, use the 'path' of the entry instead",
+      "description": "从外层表单的 rules 对象获取规则的路径。如果没有设定，使用表项的 path 代替",
+      "description_zh": "从外层表单的 rules 对象获取规则的路径。如果没有设定，使用表项的 path 代替",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "从外层表单的 `rules` 对象获取规则的路径。如果没有设定，使用表项的 `path` 代替"
+      "version": "",
+      "required": false
     },
     "show-feedback": {
-      "value": "",
-      "description": "Whether to display verification feedback",
+      "description": "是否展示校验反馈",
+      "description_zh": "是否展示校验反馈",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示校验反馈"
+      "version": "",
+      "required": false
     },
     "show-label": {
-      "value": "",
-      "description": "Whether to display labels. If not, use the 'show-label' of the outer 'n-form'",
+      "description": "是否展示标签。如果没有被设定，使用外层 n-form 的 show-label",
+      "description_zh": "是否展示标签。如果没有被设定，使用外层 n-form 的 show-label",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示标签。如果没有被设定，使用外层 `n-form` 的 `show-label`"
+      "version": "",
+      "required": false
     },
     "show-require-mark": {
+      "description": "是否展示必填的星号。如果没有被设定，使用外层 n-form 的 show-require-mark",
+      "description_zh": "是否展示必填的星号。如果没有被设定，使用外层 n-form 的 show-require-mark",
+      "default": "-",
       "value": "",
-      "description": "Whether or not to display a required asterisk. If not set, use the 'show-require-mark' of the outer 'n-form'",
-      "default": "false",
       "type": "boolean",
-      "description_zh": "是否展示必填的星号。如果没有被设定，使用外层 `n-form` 的 `show-require-mark`"
+      "version": "",
+      "required": false
     },
     "require-mark-placement": {
-      "value": [
-        "left",
-        "right",
-        "right-hanging"
-      ],
-      "description": "The location of the required asterisk. If it is not set, use the 'require-mark-placement' of the outer 'n-form'",
+      "description": "必填的星号的位置。如果没有被设定，使用外层 n-form 的 require-mark-placement",
+      "description_zh": "必填的星号的位置。如果没有被设定，使用外层 n-form 的 require-mark-placement",
       "default": "right",
-      "type": "left | right | right-hanging",
-      "description_zh": "必填的星号的位置。如果没有被设定，使用外层 `n-form` 的 `require-mark-placement`"
+      "value": "",
+      "type": "left / right / right-hanging",
+      "version": "'right-hanging' 2.24.0",
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "size",
+      "description": "尺寸",
+      "description_zh": "尺寸",
       "default": "medium",
-      "type": "small | medium | large",
-      "description_zh": "尺寸"
+      "value": "",
+      "type": "small / medium / large",
+      "version": "",
+      "required": false
     },
     "validation-status": {
-      "value": [
-        "error",
-        "success",
-        "warning"
-      ],
-      "description": "The validation status of the form. If it is not set to 'undefined', the result of the rule validation will be overwritten",
+      "description": "表单的验证状态。不设为 undefined时，会覆盖规则验证的结果",
+      "description_zh": "表单的验证状态。不设为 undefined时，会覆盖规则验证的结果",
       "default": "undefined",
-      "type": "error | success | warning",
-      "description_zh": "表单的验证状态。不设为 `undefined`时，会覆盖规则验证的结果"
+      "value": "",
+      "type": "error / success / warning",
+      "version": "",
+      "required": false
     }
   },
+  "events": [],
   "methods": [
     {
       "name": "validate",
-      "description": "Verify the entry, the return value type of Promise rejection is 'Array<FormValidationError>'. If 'trigger' is not set, all the rules for this entry will be used. 'shouldRuleBeApplied' can be used to further filter rules that have been filtered by 'trigger'",
-      "params": "(options: { trigger?: string, callback?: (errors?: Array<FormValidationError>) => void, shouldRuleBeApplied?: FormItemRule => boolean, options?: AsyncValidatorOptions }) => Promise<void>",
-      "description_zh": "验证表项，Promise rejection 的返回值类型是 `Array<FormValidationError>`。如果不设定 `trigger`，这一个表项全部的规则都会被使用。`shouldRuleBeApplied` 可以用来进一步过滤已经经过 `trigger` 筛选的规则"
+      "description": "验证表项，Promise rejection 的返回值类型是 FormValidationError。如果不设定 trigger，这一个表项全部的规则都会被使用。shouldRuleBeApplied 可以用来进一步过滤已经经过 trigger 筛选的规则",
+      "description_zh": "验证表项，Promise rejection 的返回值类型是 FormValidationError。如果不设定 trigger，这一个表项全部的规则都会被使用。shouldRuleBeApplied 可以用来进一步过滤已经经过 trigger 筛选的规则",
+      "params": "(options: { trigger?: string, callback?: (errors: FormValidationError | undefined, extra: { warnings: FormValidationError | undefined }) => void, shouldRuleBeApplied?: FormItemRule => boolean, options?: AsyncValidatorOptions }) => Promise<{ warnings: FormValidationError | undefined }>",
+      "version": "warnings 2.37.1"
     },
     {
       "name": "restoreValidation",
-      "description": "Revert to an unverified state",
+      "description": "还原到未校验的状态",
+      "description_zh": "还原到未校验的状态",
       "params": "() => void",
-      "description_zh": "还原到未校验的状态"
+      "version": ""
     }
   ],
-  "typeDetail": {
-    "FormItemRule": [
-      {
-        "name": "asyncValidator",
-        "description": "异步校验，支持定义回调函数",
-        "type": "(rule: FormItemRule, value: any, callback: (error?: Error) => void) => void"
-      },
-      {
-        "name": "message",
-        "description": "校验失败时展示的信息",
-        "type": "string"
-      },
-      {
-        "name": "renderMessage",
-        "description": "信息的渲染函数",
-        "type": "() => VNodeChild"
-      },
-      {
-        "name": "required",
-        "description": "是否必填",
-        "type": "boolean"
-      },
-      {
-        "name": "trigger",
-        "description": "触发方式",
-        "type": "string | Array<string>"
-      },
-      {
-        "name": "validator",
-        "description": "校验规则",
-        "type": "(rule: FormItemRule, value: any) => boolean | Error"
-      }
-    ]
-  },
-  "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/form",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/form"
+  "slots": [
+    {
+      "name": "default",
+      "description": "内容",
+      "description_zh": "内容"
+    },
+    {
+      "name": "feedback",
+      "description": "表项的反馈信息",
+      "description_zh": "表项的反馈信息",
+      "version": "2.24.0"
+    },
+    {
+      "name": "label",
+      "description": "标签内容",
+      "description_zh": "标签内容",
+      "version": ""
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/form",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/form",
+  "filename": "FormItem",
+  "typeDetail": {}
 }

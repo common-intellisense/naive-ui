@@ -2,395 +2,496 @@
   "name": "NDataTable",
   "props": {
     "allow-checking-not-loaded": {
-      "value": "",
-      "description": "Whether to allow cascade checks for nodes that are not yet fully loaded. If you're going to use this attribute, keep in mind that 'checked-row-keys' may be incomplete",
+      "description": "是否允许级联勾选还没有完全加载的节点。如果你要用这个属性，请记住 checked-row-keys 可能是不完整的",
+      "description_zh": "是否允许级联勾选还没有完全加载的节点。如果你要用这个属性，请记住 checked-row-keys 可能是不完整的",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否允许级联勾选还没有完全加载的节点。如果你要用这个属性，请记住 `checked-row-keys` 可能是不完整的"
+      "version": "2.28.0",
+      "required": false
     },
     "bordered": {
-      "value": "",
-      "description": "Whether or not to display the border",
+      "description": "是否显示 border",
+      "description_zh": "是否显示 border",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示 border"
+      "version": "",
+      "required": false
     },
     "bottom-bordered": {
-      "value": "",
-      "description": "Whether or not to display the bottom border",
+      "description": "是否显示 bottom border",
+      "description_zh": "是否显示 bottom border",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示 bottom border"
+      "version": "",
+      "required": false
     },
     ":checked-row-keys": {
-      "value": "",
-      "description": "The key of the selected column",
+      "description": "被选中的行的 key",
+      "description_zh": "被选中的行的 key",
       "default": "undefined",
+      "value": "",
       "type": "Array<string | number>",
-      "description_zh": "被选中的列的 key"
+      "version": "",
+      "required": false
     },
     "cascade": {
-      "value": "",
-      "description": "Whether or not to cascade when selecting tree data",
+      "description": "在进行树型数据选择的时候是否级联",
+      "description_zh": "在进行树型数据选择的时候是否级联",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "在进行树型数据选择的时候是否级联"
+      "version": "",
+      "required": false
     },
     "children-key": {
-      "value": "",
-      "description": "The key of the descendant node in the tree data",
+      "description": "树形数据下后代节点在数据中的 key",
+      "description_zh": "树形数据下后代节点在数据中的 key",
       "default": "children",
+      "value": "",
       "type": "string",
-      "description_zh": "树形数据下后代节点在数据中的 key"
+      "version": "",
+      "required": false
     },
     ":columns": {
-      "value": "",
-      "description": "Columns that need to be displayed",
-      "default": "[]",
-      "type": "Array<DataTableColumn>",
+      "description": "需要展示的列",
       "description_zh": "需要展示的列",
+      "default": "[]",
+      "value": "",
+      "type": "Array<DataTableColumn>",
+      "version": "",
       "required": true
     },
     ":data": {
-      "value": "",
-      "description": "Data to be presented",
-      "default": "[]",
-      "type": "Array<object>",
+      "description": "需要展示的数据",
       "description_zh": "需要展示的数据",
+      "default": "[]",
+      "value": "",
+      "type": "Array<object>",
+      "version": "",
       "required": true
     },
     ":default-checked-row-keys": {
-      "value": "",
-      "description": "The default key value is selected",
+      "description": "默认选中的 key 值",
+      "description_zh": "默认选中的 key 值",
       "default": "[]",
+      "value": "",
       "type": "Array<string | number>",
-      "description_zh": "默认选中的 key 值"
+      "version": "",
+      "required": false
     },
     ":default-expanded-row-keys": {
-      "value": "",
-      "description": "The key value of the default expanded row",
+      "description": "默认展开行的 key 值",
+      "description_zh": "默认展开行的 key 值",
       "default": "[]",
+      "value": "",
       "type": "Array<string | number>",
-      "description_zh": "默认展开行的 key 值"
+      "version": "",
+      "required": false
     },
     "default-expand-all": {
-      "value": "",
-      "description": "Whether to expand all expandable rows by default, and cannot be used when expanding rows asynchronously",
+      "description": "是否默认展开全部可展开的行，不可在异步展开行时使用",
+      "description_zh": "是否默认展开全部可展开的行，不可在异步展开行时使用",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否默认展开全部可展开的行，不可在异步展开行时使用"
+      "version": "2.30.4",
+      "required": false
     },
     ":expanded-row-keys": {
-      "value": "",
-      "description": "Expand the key value of the row",
+      "description": "展开行的 key 值",
+      "description_zh": "展开行的 key 值",
       "default": "undefined",
-      "type": "Array<string | number>",
-      "description_zh": "展开行的 key 值"
-    },
-    ":indent": {
       "value": "",
-      "description": "Indentation of row content when using tree data",
-      "default": "16",
-      "type": "number",
-      "description_zh": "使用树形数据时行内容的缩进"
+      "type": "Array<string | number>",
+      "version": "",
+      "required": false
     },
-    "pagination-behavior-on-filter": {
-      "value": [
-        "first",
-        "current"
-      ],
-      "description": "After filtering the status of the page, first is to return to the home page, and current is to stay on the current page",
-      "default": "current",
-      "type": "first / current",
-      "description_zh": "过滤操作后页面的状态，first 为回到首页，current 为停留在当前页"
+    "filter-icon-popover-props": {
+      "description": "过滤按钮的 Popover 属性，属性参考 Popover props",
+      "description_zh": "过滤按钮的 Popover 属性，属性参考 Popover props",
+      "default": "{ trigger: click, placement: bottom }",
+      "value": "",
+      "type": "PopoverProps",
+      "version": "2.39.0",
+      "required": false
     },
     "flex-height": {
-      "value": "",
-      "description": "Whether or not to have the height of the table body automatically adapt to the height of the entire table area, turning on this option will make 'table-layout' always fixed",
+      "description": "是否让表格主体的高度自动适应整个表格区域的高度，打开这个选项会让 table-layout 始终为 'fixed'",
+      "description_zh": "是否让表格主体的高度自动适应整个表格区域的高度，打开这个选项会让 table-layout 始终为 'fixed'",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否让表格主体的高度自动适应整个表格区域的高度，打开这个选项会让 `table-layout` 始终为 fixed"
+      "version": "",
+      "required": false
+    },
+    ":get-csv-cell": {
+      "description": "获取 CSV 的单元格数据",
+      "description_zh": "获取 CSV 的单元格数据",
+      "default": "undefined",
+      "value": "",
+      "type": "(value: any, row: object, col: DataTableBaseColumn) => string",
+      "version": "2.40.2",
+      "required": false
+    },
+    ":get-csv-header": {
+      "description": "获取 CSV 的 header",
+      "description_zh": "获取 CSV 的 header",
+      "default": "undefined",
+      "value": "",
+      "type": "(cols: Array<DataTableColumn>) => string",
+      "version": "2.40.2",
+      "required": false
+    },
+    ":header-height": {
+      "description": "在开启 virtual-scroll-header 属性的情况下，表头的高度",
+      "description_zh": "在开启 virtual-scroll-header 属性的情况下，表头的高度",
+      "default": "28",
+      "value": "",
+      "type": "number",
+      "version": "2.40.0",
+      "required": false
+    },
+    ":height-for-row": {
+      "description": "每行高度的配置函数，必须配合 virtual-scroll-x 使用，如果不进行配置，每一行的高度会被设为 min-row-height",
+      "description_zh": "每行高度的配置函数，必须配合 virtual-scroll-x 使用，如果不进行配置，每一行的高度会被设为 min-row-height",
+      "default": "undefined",
+      "value": "",
+      "type": "(rowData: object, index: number) => number",
+      "version": "2.40.0",
+      "required": false
+    },
+    ":indent": {
+      "description": "使用树形数据时行内容的缩进",
+      "description_zh": "使用树形数据时行内容的缩进",
+      "default": "16",
+      "value": "",
+      "type": "number",
+      "version": "",
+      "required": false
     },
     "loading": {
-      "value": "",
-      "description": "Whether the loading status is displayed",
+      "description": "是否显示 loading 状态",
+      "description_zh": "是否显示 loading 状态",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示 loading 状态"
+      "version": "",
+      "required": false
     },
     "max-height": {
-      "value": "",
-      "description": "The maximum height of the table contents, which can be a CSS property value",
+      "description": "表格内容的最大高度，可以是 CSS 属性值",
+      "description_zh": "表格内容的最大高度，可以是 CSS 属性值",
       "default": "undefined",
+      "value": "",
       "type": "number | string",
-      "description_zh": "表格内容的最大高度，可以是 CSS 属性值"
+      "version": "",
+      "required": false
     },
     "min-height": {
-      "value": "",
-      "description": "The minimum height of the table content, which can be a CSS property value",
+      "description": "表格内容的最低高度，可以是 CSS 属性值",
+      "description_zh": "表格内容的最低高度，可以是 CSS 属性值",
       "default": "undefined",
+      "value": "",
       "type": "number | string",
-      "description_zh": "表格内容的最低高度，可以是 CSS 属性值"
+      "version": "",
+      "required": false
+    },
+    ":min-row-height": {
+      "description": "在开启 virtual-scroll 或 virtual-scroll-x 的情况下，每一行的最小高度，所有的行的高度必须比这个值更大",
+      "description_zh": "在开启 virtual-scroll 或 virtual-scroll-x 的情况下，每一行的最小高度，所有的行的高度必须比这个值更大",
+      "default": "28",
+      "value": "",
+      "type": "number",
+      "version": "2.40.0",
+      "required": false
     },
     "paginate-single-page": {
-      "value": "",
-      "description": "If there is only one page of table data, whether to display pagination",
+      "description": "当表格数据只有一页时是否显示分页面",
+      "description_zh": "当表格数据只有一页时是否显示分页面",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "当表格数据只有一页时是否显示分页面"
+      "version": "2.28.0",
+      "required": false
     },
     ":pagination": {
-      "value": "",
-      "description": "Attribute reference [Pagination props](pagination#Pagination-Props)",
+      "description": "属性参考 Pagination props",
+      "description_zh": "属性参考 Pagination props",
       "default": "false",
+      "value": "",
       "type": "false | object",
-      "description_zh": "属性参考 [Pagination props](pagination#Pagination-Props)",
+      "version": "",
       "required": true
     },
-    "remote": {
+    "pagination-behavior-on-filter": {
+      "description": "过滤操作后页面的状态，'first' 为回到首页，'current' 为停留在当前页",
+      "description_zh": "过滤操作后页面的状态，'first' 为回到首页，'current' 为停留在当前页",
+      "default": "current",
       "value": "",
-      "description": "Whether or not the table is automatically paginated, you may need to set it to true in the case of asynchronousness",
-      "default": "false",
-      "type": "boolean",
-      "description_zh": "表格是否自动分页数据，在异步的状况下你可能需要把它设为 true"
+      "type": "first / current",
+      "version": "2.28.3",
+      "required": false
     },
-    "render-cell": {
+    "remote": {
+      "description": "表格是否自动分页数据，在异步的状况下你可能需要把它设为 true",
+      "description_zh": "表格是否自动分页数据，在异步的状况下你可能需要把它设为 true",
+      "default": "false",
       "value": "",
-      "description": "Custom cell rendering, with a lower priority than the render of the column",
+      "type": "boolean",
+      "version": "",
+      "required": false
+    },
+    ":render-cell": {
+      "description": "自定义单元格渲染，优先级低于列的 render",
+      "description_zh": "自定义单元格渲染，优先级低于列的 render",
       "default": "undefined",
+      "value": "",
       "type": "(value: any, rowData: object, column: DataTableBaseColumn) => VNodeChild",
-      "description_zh": "自定义单元格渲染，优先级低于列的 render"
+      "version": "2.30.5",
+      "required": false
     },
     ":render-expand-icon": {
-      "value": "",
-      "description": "Customize the render expansion icon",
+      "description": "自定义渲染展开图标",
+      "description_zh": "自定义渲染展开图标",
       "default": "undefined",
-      "type": "({ expanded }: { expanded: boolean }) => VNodeChild",
-      "description_zh": "自定义渲染展开图标"
+      "value": "",
+      "type": "({ expanded, rowData }: { expanded: boolean, rowData: object }) => VNodeChild",
+      "version": "2.32.2, expanded: 2.34.4, rowData: 2.40.0",
+      "required": false
     },
-    "row-class-name": {
-      "value": "",
-      "description": "The class name on each line",
+    ":row-class-name": {
+      "description": "每一行上的类名",
+      "description_zh": "每一行上的类名",
       "default": "undefined",
+      "value": "",
       "type": "string | (rowData: object, index : number) => string",
-      "description_zh": "每一行上的类名"
+      "version": "",
+      "required": false
     },
-    "row-key": {
-      "value": "",
-      "description": "Create a row's key from the row data (if you don't want to add a key to each row)",
+    ":row-key": {
+      "description": "通过行数据创建行的 key（如果你不想给每一行加上 key）",
+      "description_zh": "通过行数据创建行的 key（如果你不想给每一行加上 key）",
       "default": "undefined",
+      "value": "",
       "type": "(rowData: object) => (number | string)",
-      "description_zh": "通过行数据创建行的 key（如果你不想给每一行加上 key）"
+      "version": "",
+      "required": false
     },
     ":row-props": {
-      "value": "",
-      "description": "Custom row attributes",
+      "description": "自定义行属性",
+      "description_zh": "自定义行属性",
       "default": "undefined",
-      "type": "(rowData: object, rowIndex : number) => object",
-      "description_zh": "自定义行属性"
+      "value": "",
+      "type": "(rowData: object, rowIndex : number) => HTMLAttributes",
+      "version": "",
+      "required": false
     },
     "scroll-x": {
-      "value": "",
-      "description": "The horizontal width of the table contents, if the columns are fixed horizontally, you need to set it",
+      "description": "表格内容的横向宽度，如果列被水平固定了，则需要设定它",
+      "description_zh": "表格内容的横向宽度，如果列被水平固定了，则需要设定它",
       "default": "undefined",
+      "value": "",
       "type": "number | string",
-      "description_zh": "表格内容的横向宽度，如果列被水平固定了，则需要设定它"
+      "version": "",
+      "required": false
     },
-    ":scrollbar-props": {
-      "value": "",
-      "description": "Attribute Reference [Scrollbar props](scrollbar#Scrollbar-Props)",
+    "scrollbar-props": {
+      "description": "属性参考 Scrollbar props，DataTable 中已存在 on-scroll 属性，此处 on-scroll 属性不生效",
+      "description_zh": "属性参考 Scrollbar props，DataTable 中已存在 on-scroll 属性，此处 on-scroll 属性不生效",
       "default": "undefined",
-      "type": "object",
-      "description_zh": "属性参考 [Scrollbar props](scrollbar#Scrollbar-Props)"
+      "value": "",
+      "type": "ScrollbarProps",
+      "version": "",
+      "required": false
     },
     "single-column": {
-      "value": "",
-      "description": "Whether or not to set the dividing line of the row, when the parameter is 'true', the cell does not have a lower edge line",
+      "description": "是否不设定行的分割线，当参数为true时，则单元格没有下边线",
+      "description_zh": "是否不设定行的分割线，当参数为true时，则单元格没有下边线",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否不设定行的分割线，当参数为`true`时，则单元格没有下边线"
+      "version": "",
+      "required": false
     },
     "single-line": {
-      "value": "",
-      "description": "Whether or not to set the dividing line of the column, when the parameter value is 'true', the cell does not have a right edge",
+      "description": "是否不设定列的分割线，当参数值为 true 时，则单元格没有右边线",
+      "description_zh": "是否不设定列的分割线，当参数值为 true 时，则单元格没有右边线",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否不设定列的分割线，当参数值为 `true` 时，则单元格没有右边线"
+      "version": "",
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "The size of the table",
+      "description": "表格的尺寸",
+      "description_zh": "表格的尺寸",
       "default": "medium",
+      "value": "",
       "type": "small / medium / large",
-      "description_zh": "表格的尺寸"
+      "version": "",
+      "required": false
     },
     "spin-props": {
-      "value": "",
-      "description": "properties of the table spin",
+      "description": "表格 spin 的属性",
+      "description_zh": "表格 spin 的属性",
       "default": "undefined",
+      "value": "",
       "type": "{ strokeWidth?: number, stroke?: string }",
-      "description_zh": "表格 spin 的属性"
+      "version": "2.34.0",
+      "required": false
     },
     "sticky-expanded-rows": {
-      "value": "",
-      "description": "Whether the expanded row does not scroll horizontally with the table",
+      "description": "展开行是否不随表格横向滚动",
+      "description_zh": "展开行是否不随表格横向滚动",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "展开行是否不随表格横向滚动"
+      "version": "2.32.2",
+      "required": false
     },
     "striped": {
-      "value": "",
-      "description": "Whether or not to use zebra stripes",
+      "description": "是否使用斑马线条纹",
+      "description_zh": "是否使用斑马线条纹",
       "default": "false",
-      "type": "boolean",
-      "description_zh": "是否使用斑马线条纹"
-    },
-    ":summary": {
       "value": "",
-      "description": "For the data in the summary column of the table, see <n-a href=\"#DataTableCreateSummary-Type\">DataTableCreateSummary Type</n-a>",
+      "type": "boolean",
+      "version": "",
+      "required": false
+    },
+    "summary": {
+      "description": "表格总结栏的数据，类型见 DataTableCreateSummary Type",
+      "description_zh": "表格总结栏的数据，类型见 DataTableCreateSummary Type",
       "default": "undefined",
+      "value": "",
       "type": "DataTableCreateSummary",
-      "description_zh": "表格总结栏的数据，类型见 <n-a href=\"#DataTableCreateSummary-Type\">DataTableCreateSummary Type</n-a>"
+      "version": "",
+      "required": false
     },
     "summary-placement": {
-      "value": [
-        "top",
-        "bottom"
-      ],
-      "description": "The position of the summary bar",
+      "description": "总结栏的位置",
+      "description_zh": "总结栏的位置",
       "default": "bottom",
+      "value": "",
       "type": "top / bottom",
-      "description_zh": "总结栏的位置"
+      "version": "2.33.3",
+      "required": false
     },
     "table-layout": {
-      "value": [
-        "auto",
-        "fixed"
-      ],
-      "description": "The table's 'table-layout' style property is fixed when 'ellipsis' or 'max-height' is set",
+      "description": "表格的 table-layout 样式属性，在设定 ellipsis 或 max-height 的情况下固定为 'fixed'",
+      "description_zh": "表格的 table-layout 样式属性，在设定 ellipsis 或 max-height 的情况下固定为 'fixed'",
       "default": "auto",
+      "value": "",
       "type": "auto / fixed",
-      "description_zh": "表格的 `table-layout` 样式属性，在设定 `ellipsis` 或 `max-height` 的情况下固定为 fixed"
+      "version": "",
+      "required": false
     },
     "virtual-scroll": {
-      "value": "",
-      "description": "Whether to enable virtual scrolling to cope with large-scale data, please set 'max-height' before opening. When 'virtual-scroll' is 'true', 'rowSpan' will not take effect",
+      "description": "是否开启虚拟滚动，应对大规模数据，开启前请设定好 max-height。当 virtual-scroll 为 true 时，rowSpan 将不生效",
+      "description_zh": "是否开启虚拟滚动，应对大规模数据，开启前请设定好 max-height。当 virtual-scroll 为 true 时，rowSpan 将不生效",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否开启虚拟滚动，应对大规模数据，开启前请设定好 `max-height`。当 `virtual-scroll` 为 `true` 时，`rowSpan` 将不生效"
+      "version": "",
+      "required": false
+    },
+    "virtual-scroll-header": {
+      "description": "是否打开表头的虚拟滚动，如果横向列太多，可以考虑打开此属性，打开此属性会导致表头单元格跨行列的功能不可用，同时必须要配置 header-height",
+      "description_zh": "是否打开表头的虚拟滚动，如果横向列太多，可以考虑打开此属性，打开此属性会导致表头单元格跨行列的功能不可用，同时必须要配置 header-height",
+      "default": "false",
+      "value": "",
+      "type": "boolean",
+      "version": "2.40.0",
+      "required": false
+    },
+    "virtual-scroll-x": {
+      "description": "是否打开表主体的横向虚拟滚动，如果横向列太多，可以考虑打开此属性，打开此属性会导致单元格跨行列的功能不可用，此属性开启时，必须要和 virtual-scroll、scroll-x、min-row-height、height-for-row、virtual-scroll-header、header-height 属性配合使用，同时每一列必须都配置 width 属性，你可以参考 完整的例子",
+      "description_zh": "是否打开表主体的横向虚拟滚动，如果横向列太多，可以考虑打开此属性，打开此属性会导致单元格跨行列的功能不可用，此属性开启时，必须要和 virtual-scroll、scroll-x、min-row-height、height-for-row、virtual-scroll-header、header-height 属性配合使用，同时每一列必须都配置 width 属性，你可以参考 完整的例子",
+      "default": "false",
+      "value": "",
+      "type": "boolean",
+      "version": "2.40.0",
+      "required": false
     }
-  },
-  "methods": [
-    {
-      "name": "clearFilters",
-      "description": "Clear all filter states",
-      "params": "() => void",
-      "description_zh": "清空所有的 filter 状态"
-    },
-    {
-      "name": "clearSorter",
-      "description": "Clear all sort states",
-      "params": "() => void",
-      "description_zh": "清空所有的 sort 状态"
-    },
-    {
-      "name": "filters",
-      "description": "Sets the current filter for the table",
-      "params": "(filters: DataTableFilterState | null) => void",
-      "description_zh": "设定表格当前的过滤器"
-    },
-    {
-      "name": "page",
-      "description": "Set the page manually",
-      "params": "(page: number) => void",
-      "description_zh": "手动设置 page"
-    },
-    {
-      "name": "scrollTo",
-      "description": "Scroll through the content",
-      "params": "(options: { left?: number, top?: number, behavior?: ScrollBehavior }): void & (x: number, y: number) => void",
-      "description_zh": "滚动内容"
-    },
-    {
-      "name": "sort",
-      "description": "Set the filter status of the table",
-      "params": "(columnKey: string | number | null, order: ascend | descend | false) => void",
-      "description_zh": "设定表格的过滤状态"
-    }
-  ],
-  "typeDetail": {
-    "DataTableSortState": [
-      {
-        "name": "columnKey",
-        "description": "-",
-        "type": "string | number"
-      },
-      {
-        "name": "sorter",
-        "description": "-",
-        "type": "default | function | boolean"
-      },
-      {
-        "name": "order",
-        "description": "-",
-        "type": "ascend | descend | false"
-      }
-    ]
   },
   "events": [
     {
       "name": "load",
-      "description": "Asynchronously unfold callbacks for tree data",
+      "description": "异步展开树形数据的回调",
+      "description_zh": "异步展开树形数据的回调",
       "params": "(rowData: object) => Promise<void>",
-      "description_zh": "异步展开树形数据的回调"
+      "version": "2.27.0"
     },
     {
       "name": "scroll",
-      "description": "Callbacks for table body scrolling",
+      "description": "表格主体滚动的回调",
+      "description_zh": "表格主体滚动的回调",
       "params": "(e: Event) => void",
-      "description_zh": "表格主体滚动的回调"
+      "version": "2.29.1"
     },
     {
       "name": "update:checked-row-keys",
-      "description": "Checked-row-keys is a callback function that is triggered when the value changes",
-      "params": "(keys: Array<string | number>, rows: object[], meta: { row: object | undefined, action: check | uncheck | checkAll | uncheckAll }) => void",
-      "description_zh": "checked-row-keys 值改变时触发的回调函数"
+      "description": "checked-row-keys 值改变时触发的回调函数",
+      "description_zh": "checked-row-keys 值改变时触发的回调函数",
+      "params": "(keys: Array<string | number>, rows: object[], meta: { row: object | undefined, action: 'check' | 'uncheck' | 'checkAll' | 'uncheckAll' }) => void",
+      "version": "rows 2.30.5, meta 2.33.4"
     },
     {
       "name": "update:expanded-row-keys",
-      "description": "The callback function that is triggered when the expanded-row-keys value changes",
+      "description": "expanded-row-keys 值改变时触发的回调函数",
+      "description_zh": "expanded-row-keys 值改变时触发的回调函数",
       "params": "(keys: Array<string | number>) => void",
-      "description_zh": "expanded-row-keys 值改变时触发的回调函数"
+      "version": ""
     },
     {
       "name": "update:filters",
-      "description": "A callback function that is triggered when the filters data changes",
+      "description": "filters 数据改变时触发的回调函数",
+      "description_zh": "filters 数据改变时触发的回调函数",
       "params": "(filters: DataTableFilterState, initiatorColumn: DataTableBaseColumn)",
-      "description_zh": "filters 数据改变时触发的回调函数"
+      "version": ""
     },
     {
       "name": "update:page",
-      "description": "The callback function that is triggered when the page changes",
+      "description": "page 改变时触发的回调函数",
+      "description_zh": "page 改变时触发的回调函数",
       "params": "(page: number)",
-      "description_zh": "page 改变时触发的回调函数"
+      "version": ""
     },
     {
       "name": "update:page-size",
-      "description": "A callback function that is triggered when page-size changes",
+      "description": "page-size 改变时触发的回调函数",
+      "description_zh": "page-size 改变时触发的回调函数",
       "params": "(pageSize: number) => void",
-      "description_zh": "page-size 改变时触发的回调函数"
+      "version": ""
     },
     {
       "name": "update:sorter",
-      "description": "If the change column is sorted by multiple columns, it returns 'DataTableSortState[] | null' otherwise returns 'DataTableSortState | null`",
+      "description": "如果变动列为多列排序则返回 DataTableSortState[] | null 否则返回 DataTableSortState | null",
+      "description_zh": "如果变动列为多列排序则返回 DataTableSortState[] | null 否则返回 DataTableSortState | null",
       "params": "(options: DataTableSortState | DataTableSortState[] | null) => void",
-      "description_zh": "如果变动列为多列排序则返回 `DataTableSortState[] | null` 否则返回 `DataTableSortState | null`"
+      "version": ""
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/data-table",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/data-table"
+  "methods": [],
+  "slots": [
+    {
+      "name": "empty",
+      "description": "表格数据为空时的展示",
+      "description_zh": "表格数据为空时的展示",
+      "version": ""
+    },
+    {
+      "name": "loading",
+      "description": "表格 loading 时的展示",
+      "description_zh": "表格 loading 时的展示",
+      "version": "2.34.0"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/data-table",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/data-table",
+  "filename": "DataTable",
+  "typeDetail": {}
 }

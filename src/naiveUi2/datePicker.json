@@ -1,179 +1,388 @@
 {
   "name": "NDatePicker",
   "props": {
-    "clearable": {
+    "calendar-day-format": {
+      "description": "选择面板内部星期几的格式",
+      "description_zh": "选择面板内部星期几的格式",
+      "default": "undefined",
       "value": "",
-      "description": "Whether the purge is supported",
+      "type": "string",
+      "version": "2.40.2",
+      "required": false
+    },
+    "calendar-header-year-format": {
+      "description": "选择面板内部年的格式",
+      "description_zh": "选择面板内部年的格式",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.40.2",
+      "required": false
+    },
+    "calendar-header-month-format": {
+      "description": "选择面板内部月的格式",
+      "description_zh": "选择面板内部月的格式",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.40.2",
+      "required": false
+    },
+    "calendar-header-month-before-year": {
+      "description": "选择面板内部月是否显示在年的前面",
+      "description_zh": "选择面板内部月是否显示在年的前面",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.40.2",
+      "required": false
+    },
+    "calendar-header-month-year-separator": {
+      "description": "选择面板内部年和月的分隔字符",
+      "description_zh": "选择面板内部年和月的分隔字符",
+      "default": " ",
+      "value": "",
+      "type": "string",
+      "version": "2.40.2",
+      "required": false
+    },
+    "clearable": {
+      "description": "是否支持清除",
+      "description_zh": "是否支持清除",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否支持清除"
+      "version": "",
+      "required": false
+    },
+    "date-format": {
+      "description": "选择面板内部日期输入框的日期格式",
+      "description_zh": "选择面板内部日期输入框的日期格式",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.40.2",
+      "required": false
     },
     "default-value": {
-      "value": "",
-      "description": "The timestamp of the selected date by default",
+      "description": "默认被选中的日期的时间戳",
+      "description_zh": "默认被选中的日期的时间戳",
       "default": "undefined",
+      "value": "",
       "type": "number | [number, number] | null",
-      "description_zh": "默认被选中的日期的时间戳"
+      "version": "",
+      "required": false
     },
     "default-formatted-value": {
-      "value": "",
-      "description": "Date Picker formatted value",
+      "description": "Date Picker 格式化后的值",
+      "description_zh": "Date Picker 格式化后的值",
       "default": "undefined",
+      "value": "",
       "type": "string | [string, string] | null",
-      "description_zh": "Date Picker 格式化后的值"
+      "version": "",
+      "required": false
     },
     "disabled": {
-      "value": "",
-      "description": "Whether to disable or not",
+      "description": "是否禁用",
+      "description_zh": "是否禁用",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否禁用"
+      "version": "",
+      "required": false
     },
     "first-day-of-week": {
-      "value": [
-        "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
-      "description": "The beginning of the week on the calendar, with 0 representing Monday",
+      "description": "日历上一周的开始，0 代表周一",
+      "description_zh": "日历上一周的开始，0 代表周一",
       "default": "undefined",
-      "type": "0 / 1 / 2 / 3 / 4 / 5 / 6",
-      "description_zh": "日历上一周的开始，0 代表周一"
+      "value": "",
+      "type": "0 | 1 | 2 | 3 | 4 | 5 | 6",
+      "version": "",
+      "required": false
     },
     "formatted-value": {
-      "value": "",
-      "description": "The value after formatting",
+      "description": "格式化之后的值",
+      "description_zh": "格式化之后的值",
       "default": "undefined",
+      "value": "",
       "type": "string | [string, string] | null",
-      "description_zh": "格式化之后的值"
+      "version": "2.24.0",
+      "required": false
     },
     "input-readonly": {
-      "value": "",
-      "description": "Make input boxes read-only (avoid opening the virtual keyboard on mobile devices)",
+      "description": "设置输入框为只读（避免在移动设备上打开虚拟键盘）",
+      "description_zh": "设置输入框为只读（避免在移动设备上打开虚拟键盘）",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "设置输入框为只读（避免在移动设备上打开虚拟键盘）"
+      "version": "",
+      "required": false
+    },
+    "month-format": {
+      "description": "设置面板中月份的显示方式，详情见 format",
+      "description_zh": "设置面板中月份的显示方式，详情见 format",
+      "default": "M",
+      "value": "",
+      "type": "string",
+      "version": "2.37.0",
+      "required": false
     },
     "panel": {
-      "value": "",
-      "description": "Whether to use only panels",
+      "description": "是否只使用面板",
+      "description_zh": "是否只使用面板",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否只使用面板"
+      "version": "2.29.1",
+      "required": false
     },
     "placement": {
-      "value": [
-        "top-start",
-        "top",
-        "top-end",
-        "right-start",
-        "right",
-        "right-end",
-        "bottom-start",
-        "bottom",
-        "bottom-end",
-        "left-start",
-        "left",
-        "left-end"
-      ],
-      "description": "The pop-up position of the panel",
+      "description": "面板的弹出位置",
+      "description_zh": "面板的弹出位置",
       "default": "bottom-start",
+      "value": "",
       "type": "top-start / top / top-end / right-start / right / right-end / bottom-start / bottom / bottom-end / left-start / left / left-end",
-      "description_zh": "面板的弹出位置"
+      "version": "2.25.0",
+      "required": false
+    },
+    "quarter-format": {
+      "description": "设置面板中季度的显示方式，详情见 format",
+      "description_zh": "设置面板中季度的显示方式，详情见 format",
+      "default": "QQ",
+      "value": "",
+      "type": "string",
+      "version": "2.37.0",
+      "required": false
     },
     ":shortcuts": {
-      "value": "",
-      "description": "Customize shortcut buttons",
+      "description": "自定义快捷按钮",
+      "description_zh": "自定义快捷按钮",
       "default": "undefined",
+      "value": "",
       "type": "Record<string, number | (() => number)> | Record<string, [number, number] | (() => [number, number])>",
-      "description_zh": "自定义快捷按钮"
+      "version": "",
+      "required": false
     },
     "show": {
-      "value": "",
-      "description": "Whether or not to display the panel",
+      "description": "是否展示面板",
+      "description_zh": "是否展示面板",
       "default": "undefined",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示面板"
+      "version": "2.28.3",
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "size",
+      "description": "尺寸",
+      "description_zh": "尺寸",
       "default": "medium",
+      "value": "",
       "type": "small / medium / large",
-      "description_zh": "尺寸"
+      "version": "",
+      "required": false
     },
     "status": {
-      "value": [
-        "success",
-        "warning",
-        "error"
-      ],
-      "description": "Verify the status",
+      "description": "验证状态",
+      "description_zh": "验证状态",
       "default": "undefined",
+      "value": "",
       "type": "success / warning / error",
-      "description_zh": "验证状态"
+      "version": "2.27.0",
+      "required": false
+    },
+    "time-picker-format": {
+      "description": "日期面板内时间的显示方式，详情见 format",
+      "description_zh": "日期面板内时间的显示方式，详情见 format",
+      "default": "undefined",
+      "value": "",
+      "type": "string | undefined",
+      "version": "2.38.2",
+      "required": false
     },
     "to": {
-      "value": "",
-      "description": "panel's container node, 'false' will stay in place",
+      "description": "面板的容器节点，false 会待在原地",
+      "description_zh": "面板的容器节点，false 会待在原地",
       "default": "body",
+      "value": "",
       "type": "string | HTMLElement | false",
-      "description_zh": "面板的容器节点，`false` 会待在原地"
+      "version": "",
+      "required": false
     },
     "type": {
-      "value": [
-        "date",
-        "datetime",
-        "daterange",
-        "datetimerange",
-        "month",
-        "monthrange",
-        "year",
-        "quarter"
-      ],
-      "description": "Date Picker",
+      "description": "Date Picker 的类型",
+      "description_zh": "Date Picker 的类型",
       "default": "date",
-      "type": "date / datetime / daterange / datetimerange / month / monthrange / year / quarter",
-      "description_zh": "Date Picker 的类型"
-    },
-    "v-model:value": {
       "value": "",
-      "description": "Date Picker",
-      "default": "undefined",
-      "type": "number | [number, number] | null",
+      "type": "date / datetime / daterange / datetimerange / month / monthrange / year / yearrange / quarter / quarterrange / week",
+      "version": "'quarter' v2.22.0, 'monthrange' 2.28.3",
+      "required": false
+    },
+    ":v-model:value": {
+      "description": "Date Picker 的值",
       "description_zh": "Date Picker 的值",
+      "default": "undefined",
+      "value": "",
+      "type": "number | [number, number] | null",
+      "version": "",
       "required": true
     },
     "value-format": {
-      "value": "",
-      "description": "The format of the bound value, see [format](https://date-fns.org/v2.23.0/docs/format) for details.",
+      "description": "绑定值的格式，详情见 format",
+      "description_zh": "绑定值的格式，详情见 format",
       "default": "跟随 format 属性",
+      "value": "",
       "type": "string",
-      "description_zh": "绑定值的格式，详情见 [format](https://date-fns.org/v2.23.0/docs/format)"
+      "version": "",
+      "required": false
+    },
+    "year-format": {
+      "description": "设置面板中年的显示方式，详情见 format",
+      "description_zh": "设置面板中年的显示方式，详情见 format",
+      "default": "y",
+      "value": "",
+      "type": "string",
+      "version": "2.37.0",
+      "required": false
+    },
+    "year-range": {
+      "description": "设置面板中的年份选择范围",
+      "description_zh": "设置面板中的年份选择范围",
+      "default": "[1901, 2100]",
+      "value": "",
+      "type": "[number, number]",
+      "version": "2.40.0",
+      "required": false
     }
   },
-  "methods": [
+  "events": [
     {
-      "name": "focus",
-      "description": "focus",
+      "name": "clear",
+      "description": "用户 clear 时执行的回调",
+      "description_zh": "用户 clear 时执行的回调",
       "params": "() => void",
-      "description_zh": "聚焦"
+      "version": "2.28.3"
+    },
+    {
+      "name": "confirm",
+      "description": "用户 confirm 时执行的回调",
+      "description_zh": "用户 confirm 时执行的回调",
+      "params": "(value: number | [number, number] | null, formattedValue: string | [string, string] | null) => void",
+      "version": "2.28.3"
     },
     {
       "name": "blur",
-      "description": "Out of focus",
+      "description": "用户 blur 时执行的回调",
+      "description_zh": "用户 blur 时执行的回调",
       "params": "() => void",
-      "description_zh": "失焦"
+      "version": ""
+    },
+    {
+      "name": "focus",
+      "description": "用户 focus 时执行的回调",
+      "description_zh": "用户 focus 时执行的回调",
+      "params": "() => void",
+      "version": ""
+    },
+    {
+      "name": "next-month",
+      "description": "点击下一个月时的回调",
+      "description_zh": "点击下一个月时的回调",
+      "params": "() => void",
+      "version": "2.37.0"
+    },
+    {
+      "name": "prev-month",
+      "description": "点击上一个月时的回调",
+      "description_zh": "点击上一个月时的回调",
+      "params": "() => void",
+      "version": "2.37.0"
+    },
+    {
+      "name": "next-year",
+      "description": "点击下一年时的回调",
+      "description_zh": "点击下一年时的回调",
+      "params": "() => void",
+      "version": "2.37.0"
+    },
+    {
+      "name": "prev-year",
+      "description": "点击上一年时的回调",
+      "description_zh": "点击上一年时的回调",
+      "params": "() => void",
+      "version": "2.37.0"
+    },
+    {
+      "name": "update:show",
+      "description": "面板打开、关闭时的回调",
+      "description_zh": "面板打开、关闭时的回调",
+      "params": "(show: boolean) => void",
+      "version": "2.28.3"
     }
   ],
+  "methods": [
+    {
+      "name": "focus",
+      "description": "聚焦",
+      "description_zh": "聚焦",
+      "params": "() => void",
+      "version": "2.24.2"
+    },
+    {
+      "name": "blur",
+      "description": "失焦",
+      "description_zh": "失焦",
+      "params": "() => void",
+      "version": "2.24.2"
+    }
+  ],
+  "slots": [
+    {
+      "name": "date-icon",
+      "description": "日期输入框的图标",
+      "description_zh": "日期输入框的图标",
+      "version": "2.29.0"
+    },
+    {
+      "name": "footer",
+      "description": "添加额外的页脚",
+      "description_zh": "添加额外的页脚",
+      "version": ""
+    },
+    {
+      "name": "next-month",
+      "description": "日期面板的 下一个 图标",
+      "description_zh": "日期面板的 下一个 图标",
+      "version": "2.33.4"
+    },
+    {
+      "name": "next-year",
+      "description": "日期面板的 快速下一个 图标",
+      "description_zh": "日期面板的 快速下一个 图标",
+      "version": "2.33.4"
+    },
+    {
+      "name": "prev-month",
+      "description": "日期面板的 上一个 图标",
+      "description_zh": "日期面板的 上一个 图标",
+      "version": "2.33.4"
+    },
+    {
+      "name": "prev-year",
+      "description": "日期面板的 快速上一个 图标",
+      "description_zh": "日期面板的 快速上一个 图标",
+      "version": "2.33.4"
+    },
+    {
+      "name": "separator",
+      "description": "日期范围分隔符号",
+      "description_zh": "日期范围分隔符号",
+      "version": "2.29.0"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/date-picker",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/date-picker",
+  "filename": "DatePicker",
   "typeDetail": {
     "Date": [
       {
@@ -514,39 +723,5 @@
         "type": "(value: number | null, formattedValue: string | null) => void"
       }
     ]
-  },
-  "events": [
-    {
-      "name": "clear",
-      "description": "Callbacks executed when the user is clear",
-      "params": "() => void",
-      "description_zh": "用户 clear 时执行的回调"
-    },
-    {
-      "name": "confirm",
-      "description": "A callback that is executed when the user confirms",
-      "params": "(value: number | [number, number] | null, formattedValue: string | [string, string] | null) => void",
-      "description_zh": "用户 confirm 时执行的回调"
-    },
-    {
-      "name": "blur",
-      "description": "A callback that is executed when the user blurs",
-      "params": "() => void",
-      "description_zh": "用户 blur 时执行的回调"
-    },
-    {
-      "name": "focus",
-      "description": "The callback executed when the user is focused",
-      "params": "() => void",
-      "description_zh": "用户 focus 时执行的回调"
-    },
-    {
-      "name": "update:show",
-      "description": "Callback when the panel is open or closed",
-      "params": "(show: boolean) => void",
-      "description_zh": "面板打开、关闭时的回调"
-    }
-  ],
-  "link": "https://www.naiveui.com/en-US/dark/components/date-picker",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/date-picker"
+  }
 }

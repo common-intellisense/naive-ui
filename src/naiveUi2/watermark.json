@@ -2,185 +2,253 @@
   "name": "NWatermark",
   "props": {
     "content": {
-      "value": "",
-      "description": "Watermark text",
-      "default": "undefined",
-      "type": "string",
+      "description": "水印文本",
       "description_zh": "水印文本",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.25.3，自 2.38.2 支持多行文本",
       "required": true
     },
     "cross": {
-      "value": "",
-      "description": "Whether it crosses boundaries is displayed",
+      "description": "是否跨越边界显示",
+      "description_zh": "是否跨越边界显示",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否跨越边界显示"
+      "version": "2.25.3",
+      "required": false
     },
     "debug": {
-      "value": "",
-      "description": "Whether to display debug information",
+      "description": "是否显示调试信息",
+      "description_zh": "是否显示调试信息",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示调试信息"
+      "version": "2.25.3",
+      "required": false
     },
     ":font-size": {
-      "value": "",
-      "description": "Font size",
+      "description": "字体大小",
+      "description_zh": "字体大小",
       "default": "14",
+      "value": "",
       "type": "number",
-      "description_zh": "字体大小"
+      "version": "2.25.3",
+      "required": false
     },
     "font-family": {
-      "value": "",
-      "description": "Font family",
+      "description": "字体族",
+      "description_zh": "字体族",
       "default": "undefined",
-      "type": "string",
-      "description_zh": "字体族"
-    },
-    ":font-style": {
       "value": "",
-      "description": "Font style",
+      "type": "string",
+      "version": "2.25.3",
+      "required": false
+    },
+    "font-style": {
+      "description": "字体风格",
+      "description_zh": "字体风格",
       "default": "normal",
-      "type": " normal / italic / oblique ${number}deg  ",
-      "description_zh": "字体风格"
+      "value": "",
+      "type": "normal / italic / `oblique ${number}deg` ",
+      "version": "2.25.3",
+      "required": false
     },
     "font-variant": {
-      "value": "",
-      "description": "font",
+      "description": "字型",
+      "description_zh": "字型",
       "default": "",
+      "value": "",
       "type": "string",
-      "description_zh": "字型"
+      "version": "2.25.3",
+      "required": false
     },
     ":font-weight": {
-      "value": "",
-      "description": "Weight",
+      "description": "字重",
+      "description_zh": "字重",
       "default": "400",
+      "value": "",
       "type": "number",
-      "description_zh": "字重"
+      "version": "2.25.3",
+      "required": false
     },
     "font-color": {
-      "value": "",
-      "description": "Font color",
+      "description": "字体颜色",
+      "description_zh": "字体颜色",
       "default": "rgba(128, 128, 128, .3)",
+      "value": "",
       "type": "string",
-      "description_zh": "字体颜色"
+      "version": "2.25.3",
+      "required": false
     },
     "fullscreen": {
-      "value": "",
-      "description": "Whether to display full screen",
+      "description": "是否展示全屏",
+      "description_zh": "是否展示全屏",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示全屏"
+      "version": "2.25.3",
+      "required": false
     },
     ":global-rotate": {
-      "value": "",
-      "description": "The overall rotation of the watermark",
+      "description": "水印整体的旋转",
+      "description_zh": "水印整体的旋转",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "水印整体的旋转"
+      "version": "2.32.0",
+      "required": false
     },
     ":line-height": {
-      "value": "",
-      "description": "Row height",
+      "description": "行高",
+      "description_zh": "行高",
       "default": "14",
+      "value": "",
       "type": "number",
-      "description_zh": "行高"
+      "version": "2.25.3",
+      "required": false
     },
     ":height": {
-      "value": "",
-      "description": "height",
+      "description": "高度",
+      "description_zh": "高度",
       "default": "32",
+      "value": "",
       "type": "number",
-      "description_zh": "高度"
+      "version": "2.25.3",
+      "required": false
     },
     "image": {
-      "value": "",
-      "description": "Picture path",
+      "description": "图片路径",
+      "description_zh": "图片路径",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "图片路径"
+      "version": "2.25.3",
+      "required": false
     },
     ":image-height": {
-      "value": "",
-      "description": "Picture height",
+      "description": "图片高度",
+      "description_zh": "图片高度",
       "default": "undefined",
+      "value": "",
       "type": "number",
-      "description_zh": "图片高度"
+      "version": "2.25.3",
+      "required": false
     },
     ":image-opacity": {
-      "value": "",
-      "description": "Image opacity",
+      "description": "图片不透明度",
+      "description_zh": "图片不透明度",
       "default": "1",
+      "value": "",
       "type": "number",
-      "description_zh": "图片不透明度"
+      "version": "2.25.3",
+      "required": false
     },
     ":image-width": {
-      "value": "",
-      "description": "Image width",
+      "description": "图片宽度",
+      "description_zh": "图片宽度",
       "default": "undefined",
+      "value": "",
       "type": "number",
-      "description_zh": "图片宽度"
+      "version": "2.25.3",
+      "required": false
     },
     ":rotate": {
-      "value": "",
-      "description": "Rotation angle",
+      "description": "旋转角度",
+      "description_zh": "旋转角度",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "旋转角度"
+      "version": "2.25.3",
+      "required": false
     },
     "selectable": {
-      "value": "",
-      "description": "Whether the content covered by the watermark is selectable",
+      "description": "被水印覆盖的内容是否可选中",
+      "description_zh": "被水印覆盖的内容是否可选中",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "被水印覆盖的内容是否可选中"
+      "version": "2.25.3",
+      "required": false
+    },
+    "text-align": {
+      "description": "在文本有多行的情况下，多行文本的对齐方式",
+      "description_zh": "在文本有多行的情况下，多行文本的对齐方式",
+      "default": "left",
+      "value": "",
+      "type": "left / center / right",
+      "version": "2.38.2",
+      "required": false
     },
     ":width": {
-      "value": "",
-      "description": "width",
+      "description": "宽度",
+      "description_zh": "宽度",
       "default": "32",
+      "value": "",
       "type": "number",
-      "description_zh": "宽度"
+      "version": "2.25.3",
+      "required": false
     },
     ":x-gap": {
-      "value": "",
-      "description": "X-axis spacing",
+      "description": "x 轴间隔",
+      "description_zh": "x 轴间隔",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "x 轴间隔"
+      "version": "2.25.3",
+      "required": false
     },
     ":x-offset": {
-      "value": "",
-      "description": "X-axis offset",
+      "description": "x 轴偏移",
+      "description_zh": "x 轴偏移",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "x 轴偏移"
+      "version": "2.25.3",
+      "required": false
     },
     ":y-gap": {
-      "value": "",
-      "description": "Y-axis spacing",
+      "description": "y 轴间隔",
+      "description_zh": "y 轴间隔",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "y 轴间隔"
+      "version": "2.25.3",
+      "required": false
     },
     ":y-offset": {
-      "value": "",
-      "description": "Y-axis offset",
+      "description": "y 轴偏移",
+      "description_zh": "y 轴偏移",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "y 轴偏移"
+      "version": "2.25.3",
+      "required": false
     },
     ":z-index": {
-      "value": "",
-      "description": "Z-axis height",
+      "description": "z 轴高度",
+      "description_zh": "z 轴高度",
       "default": "10",
+      "value": "",
       "type": "number",
-      "description_zh": "z 轴高度"
+      "version": "2.25.3",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/watermark",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/watermark"
+  "methods": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "水印覆盖的内容",
+      "description_zh": "水印覆盖的内容",
+      "version": "2.25.3"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/watermark",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/watermark",
+  "filename": "Watermark",
+  "typeDetail": {}
 }

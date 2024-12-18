@@ -2,221 +2,275 @@
   "name": "NCarousel",
   "props": {
     "autoplay": {
-      "value": "",
-      "description": "Whether or not to play automatically",
+      "description": "是否自动播放",
+      "description_zh": "是否自动播放",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否自动播放"
+      "version": "",
+      "required": false
     },
     "centered-slides": {
-      "value": "",
-      "description": "Whether to center the carousel of the current page",
+      "description": "是否居中显示当前页轮播图",
+      "description_zh": "是否居中显示当前页轮播图",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否居中显示当前页轮播图"
+      "version": "2.24.0",
+      "required": false
     },
     ":current-index": {
-      "value": "",
-      "description": "The page is currently displayed",
+      "description": "当前显示页",
+      "description_zh": "当前显示页",
       "default": "undefined",
+      "value": "",
       "type": "number",
-      "description_zh": "当前显示页"
+      "version": "2.24.0",
+      "required": false
     },
     ":default-index": {
-      "value": "",
-      "description": "The page is displayed by default",
+      "description": "默认显示页",
+      "description_zh": "默认显示页",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "默认显示页"
+      "version": "2.24.0",
+      "required": false
     },
     "direction": {
-      "value": [
-        "horizontal",
-        "vertical"
-      ],
-      "description": "The direction in which the carousel is displayed",
+      "description": "轮播图显示的方向",
+      "description_zh": "轮播图显示的方向",
       "default": "horizontal",
+      "value": "",
       "type": "horizontal / vertical",
-      "description_zh": "轮播图显示的方向"
+      "version": "",
+      "required": false
     },
     "dot-placement": {
-      "value": [
-        "top",
-        "bottom",
-        "left",
-        "right"
-      ],
-      "description": "Carousel indicates the location of the point",
+      "description": "轮播指示点位置",
+      "description_zh": "轮播指示点位置",
       "default": "bottom",
+      "value": "",
       "type": "top / bottom / left / right",
-      "description_zh": "轮播指示点位置"
+      "version": "2.24.0",
+      "required": false
     },
     "dot-type": {
-      "value": [
-        "dot",
-        "line"
-      ],
-      "description": "Carousel indicates the point style",
+      "description": "轮播指示点样式",
+      "description_zh": "轮播指示点样式",
       "default": "dot",
+      "value": "",
       "type": "dot / line",
-      "description_zh": "轮播指示点样式"
+      "version": "2.24.0",
+      "required": false
     },
     "draggable": {
-      "value": "",
-      "description": "Whether to drag and drop the mouse to toggle the carousel",
+      "description": "是否通过鼠标拖拽切换轮播图",
+      "description_zh": "是否通过鼠标拖拽切换轮播图",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否通过鼠标拖拽切换轮播图"
+      "version": "2.24.0",
+      "required": false
     },
     "effect": {
-      "value": [
-        "slide",
-        "fade",
-        "card",
-        "custom"
-      ],
-      "description": "The effect of the transition when the carousel is switched",
+      "description": "轮播图切换时的过渡效果",
+      "description_zh": "轮播图切换时的过渡效果",
       "default": "slide",
+      "value": "",
       "type": "slide / fade / card / custom",
-      "description_zh": "轮播图切换时的过渡效果"
+      "version": "2.24.0, 'card' 2.24.2",
+      "required": false
     },
     ":interval": {
-      "value": "",
-      "description": "Autoplay interval (ms)",
+      "description": "自动播放的间隔（ms）",
+      "description_zh": "自动播放的间隔（ms）",
       "default": "5000",
+      "value": "",
       "type": "number",
-      "description_zh": "自动播放的间隔（ms）"
+      "version": "",
+      "required": false
     },
     "keyboard": {
-      "value": "",
-      "description": "Whether or not to switch the carousel by pressing a button only works if the focus is on Dots",
+      "description": "是否通过按键切换轮播图，只有焦点在 Dots 上时才起作用",
+      "description_zh": "是否通过按键切换轮播图，只有焦点在 Dots 上时才起作用",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否通过按键切换轮播图，只有焦点在 Dots 上时才起作用"
+      "version": "2.24.0",
+      "required": false
     },
     "loop": {
-      "value": "",
-      "description": "Whether or not to play on a loop",
+      "description": "是否循环播放",
+      "description_zh": "是否循环播放",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否循环播放"
+      "version": "2.24.0",
+      "required": false
     },
     "mousewheel": {
-      "value": "",
-      "description": "Whether to use the mouse wheel to switch the carousel",
+      "description": "是否通过鼠标滚轮切换轮播图",
+      "description_zh": "是否通过鼠标滚轮切换轮播图",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否通过鼠标滚轮切换轮播图"
+      "version": "2.24.0",
+      "required": false
     },
-    ":next-slide-style": {
-      "value": "",
-      "description": "The style of the next carousel",
+    "next-slide-style": {
+      "description": "下一张轮播图的样式",
+      "description_zh": "下一张轮播图的样式",
       "default": "undefined",
+      "value": "",
       "type": "object | string",
-      "description_zh": "下一张轮播图的样式"
+      "version": "2.27.0",
+      "required": false
     },
-    ":prev-slide-style": {
-      "value": "",
-      "description": "The style of the previous carousel",
+    "prev-slide-style": {
+      "description": "上一张轮播图的样式",
+      "description_zh": "上一张轮播图的样式",
       "default": "undefined",
+      "value": "",
       "type": "object | string",
-      "description_zh": "上一张轮播图的样式"
+      "version": "2.27.0",
+      "required": false
     },
     "slides-per-view": {
-      "value": "",
-      "description": "The number of carousels displayed per page",
+      "description": "每一页显示的轮播图数量",
+      "description_zh": "每一页显示的轮播图数量",
       "default": "1",
-      "type": "auto | number",
-      "description_zh": "每一页显示的轮播图数量"
+      "value": "",
+      "type": "auto / number",
+      "version": "2.24.0",
+      "required": false
     },
     ":space-between": {
-      "value": "",
-      "description": "The spacing between carousels",
+      "description": "轮播图之间的间距",
+      "description_zh": "轮播图之间的间距",
       "default": "0",
+      "value": "",
       "type": "number",
-      "description_zh": "轮播图之间的间距"
+      "version": "2.24.0",
+      "required": false
     },
     "show-arrow": {
-      "value": "",
-      "description": "Whether or not to display the arrow buttons",
+      "description": "是否显示箭头按钮",
+      "description_zh": "是否显示箭头按钮",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示箭头按钮"
+      "version": "2.24.0",
+      "required": false
     },
     "show-dots": {
-      "value": "",
-      "description": "Whether to display the point",
+      "description": "是否展示指示点",
+      "description_zh": "是否展示指示点",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示指示点"
+      "version": "2.24.0",
+      "required": false
     },
     "touchable": {
-      "value": "",
-      "description": "Whether to toggle the carousel by touching and dragging",
+      "description": "是否通过触摸拖拽切换轮播图",
+      "description_zh": "是否通过触摸拖拽切换轮播图",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否通过触摸拖拽切换轮播图"
+      "version": "2.24.0",
+      "required": false
     },
-    ":transition-style": {
-      "value": "",
-      "description": "The style of the transition effect",
+    "transition-style": {
+      "description": "过渡效果的样式",
+      "description_zh": "过渡效果的样式",
       "default": "{ transitionDuration: 300ms }",
-      "type": "{ transitionDuration?: string, transitionTimingFunction?: string }",
-      "description_zh": "过渡效果的样式"
-    },
-    ":transition-props": {
       "value": "",
-      "description": "Custom Transition Effect Properties, [Refer to Vue Documentation](https://v3.cn.vuejs.org/api/built-in-components.html#transition)",
+      "type": "{ transitionDuration?: string, transitionTimingFunction?: string }",
+      "version": "2.24.0",
+      "required": false
+    },
+    "transition-props": {
+      "description": "自定义过渡效果属性，参考 Vue 文档",
+      "description_zh": "自定义过渡效果属性，参考 Vue 文档",
       "default": "undefined",
+      "value": "",
       "type": "TransitionProps",
-      "description_zh": "自定义过渡效果属性，[参考 Vue 文档](https://v3.cn.vuejs.org/api/built-in-components.html#transition)"
+      "version": "2.24.0",
+      "required": false
     },
     "trigger": {
-      "value": [
-        "click",
-        "hover"
-      ],
-      "description": "The way in which the toggle is triggered",
+      "description": "触发切换的方式",
+      "description_zh": "触发切换的方式",
       "default": "click",
+      "value": "",
       "type": "click / hover",
-      "description_zh": "触发切换的方式"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [
-    {
-      "name": "to",
-      "description": "Swipe to a page",
-      "params": "(index: number) => void",
-      "description_zh": "滑动至某一页"
-    },
-    {
-      "name": "prev",
-      "description": "Swipe to the previous page",
-      "params": "() => void",
-      "description_zh": "滑动至前一页"
-    },
-    {
-      "name": "next",
-      "description": "Swipe to the next page",
-      "params": "() => void",
-      "description_zh": "滑动至后一页"
-    },
-    {
-      "name": "getCurrentIndex",
-      "description": "Get the current page",
-      "params": "() => number",
-      "description_zh": "获取当前页"
-    }
-  ],
-  "typeDetail": {},
   "events": [
     {
       "name": "update:current-index",
-      "description": "The callback function when the current page changes",
+      "description": "当前页变化时的回调函数",
+      "description_zh": "当前页变化时的回调函数",
       "params": "(currentIndex: number, lastIndex: number) => void",
-      "description_zh": "当前页变化时的回调函数"
+      "version": "2.24.0"
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/carousel",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/carousel"
+  "methods": [
+    {
+      "name": "to",
+      "description": "滑动至某一页",
+      "description_zh": "滑动至某一页",
+      "params": "(index: number) => void",
+      "version": "2.24.0"
+    },
+    {
+      "name": "prev",
+      "description": "滑动至前一页",
+      "description_zh": "滑动至前一页",
+      "params": "() => void",
+      "version": "2.24.0"
+    },
+    {
+      "name": "next",
+      "description": "滑动至后一页",
+      "description_zh": "滑动至后一页",
+      "params": "() => void",
+      "version": "2.24.0"
+    },
+    {
+      "name": "getCurrentIndex",
+      "description": "获取当前页",
+      "description_zh": "获取当前页",
+      "params": "() => number",
+      "version": "2.24.0"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default",
+      "description": "轮播的内容",
+      "description_zh": "轮播的内容",
+      "version": ""
+    },
+    {
+      "name": "arrow",
+      "description": "箭头",
+      "description_zh": "箭头",
+      "version": "2.24.0"
+    },
+    {
+      "name": "dots",
+      "description": "指示点",
+      "description_zh": "指示点",
+      "version": "2.24.0"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/carousel",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/carousel",
+  "filename": "Carousel",
+  "typeDetail": {}
 }

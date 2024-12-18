@@ -1,90 +1,121 @@
 {
   "name": "NCheckbox",
   "props": {
-    "v-model:checked": {
+    ":v-model:checked": {
+      "description": "受控状态下是否选中",
+      "description_zh": "受控状态下是否选中",
       "default": "false",
       "value": "",
       "type": "boolean",
-      "description": "Whether the checkbox is being checked manually.",
-      "description_zh": "是否手动检查复选框。"
+      "required": true
+    },
+    "checked-value": {
+      "description": "选中时对应的值",
+      "description_zh": "选中时对应的值",
+      "default": "true",
+      "value": "",
+      "type": "string | boolean | number",
+      "required": false
     },
     "default-checked": {
+      "description": "非受控模式下默认是否选中",
+      "description_zh": "非受控模式下默认是否选中",
       "default": "false",
       "value": "",
       "type": "boolean",
-      "description": "Whether the checkbox is checked by default.",
-      "description_zh": "默认情况下是否选中复选框。"
+      "required": false
     },
     "disabled": {
+      "description": "是否禁用",
+      "description_zh": "是否禁用",
       "default": "false",
       "value": "",
       "type": "boolean",
-      "description": "Whether the checkbox is disabled.",
-      "description_zh": "复选框是否被禁用。"
+      "required": false
     },
     "focusable": {
+      "description": "是否可被 focus",
+      "description_zh": "是否可被 focus",
       "default": "true",
       "value": "",
       "type": "boolean",
-      "description": "Whether the checkbox gains focus after being checked.",
-      "description_zh": "复选框在检查后是否获得焦点。"
+      "required": false
     },
     "indeterminate": {
+      "description": "是否部分选中",
+      "description_zh": "是否部分选中",
       "default": "false",
       "value": "",
       "type": "boolean",
-      "description": "Whether the checkbox can have a third indeterminate state.",
-      "description_zh": "复选框是否可以具有第三个不确定状态。"
+      "required": false
     },
     "label": {
+      "description": "Checkbox 的标签",
+      "description_zh": "Checkbox 的标签",
       "default": "undefined",
       "value": "",
       "type": "string",
-      "description": "Checkbox label.",
-      "description_zh": "复选框标签。"
+      "required": false
     },
     "size": {
+      "description": "组件尺寸",
+      "description_zh": "组件尺寸",
       "default": "medium",
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
+      "value": "",
       "type": "small / medium / large",
-      "description": "The size of the checkbox.",
-      "description_zh": "复选框的大小。"
+      "required": false
+    },
+    "unchecked-value": {
+      "description": "未选中时对应的值",
+      "description_zh": "未选中时对应的值",
+      "default": "false",
+      "value": "",
+      "type": "string | boolean | number",
+      "required": false
     },
     "value": {
+      "description": "Checkbox 在 checkbox group 中使用的值",
+      "description_zh": "Checkbox 在 checkbox group 中使用的值",
       "default": "undefined",
       "value": "",
       "type": "string | number",
-      "description": "The value of the checkbox to be used in a checkbox group.",
-      "description_zh": "在复选框组中使用的复选框的值。"
+      "required": false
     }
   },
+  "events": [
+    {
+      "name": "update:checked",
+      "description": "当 checked 改变时触发的回调函数",
+      "description_zh": "当 checked 改变时触发的回调函数",
+      "params": "(checked: boolean) => void"
+    }
+  ],
   "methods": [
     {
       "name": "focus",
-      "description": "focus",
+      "description": "聚焦",
+      "description_zh": "聚焦",
       "params": "() => void",
-      "description_zh": "聚焦"
+      "version": "2.24.2"
     },
     {
       "name": "blur",
-      "description": "Out of focus",
+      "description": "失焦",
+      "description_zh": "失焦",
       "params": "() => void",
-      "description_zh": "失焦"
+      "version": "2.24.2"
     }
   ],
-  "typeDetail": {},
-  "events": [
+  "slots": [
     {
-      "name": "update:current-index",
-      "description": "The callback function when the current page changes",
-      "params": "(currentIndex: number, lastIndex: number) => void",
-      "description_zh": "当前页变化时的回调函数"
+      "name": "default",
+      "description": "Checkbox 的标签内容",
+      "description_zh": "Checkbox 的标签内容"
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/checkbox",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/checkbox"
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/checkbox",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/checkbox",
+  "filename": "Checkbox",
+  "typeDetail": {}
 }

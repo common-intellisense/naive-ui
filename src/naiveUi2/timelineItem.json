@@ -2,62 +2,87 @@
   "name": "NTimelineItem",
   "props": {
     "color": {
-      "value": "",
-      "description": "The color of the option",
+      "description": "选项的颜色",
+      "description_zh": "选项的颜色",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "选项的颜色"
+      "version": "",
+      "required": false
     },
     "content": {
-      "value": "",
-      "description": "Option content",
-      "default": "undefined",
-      "type": "string",
+      "description": "选项内容",
       "description_zh": "选项内容",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
       "required": true
     },
     "line-type": {
-      "value": [
-        "default",
-        "dashed"
-      ],
-      "description": "The type of line",
+      "description": "线的类型",
+      "description_zh": "线的类型",
       "default": "default",
+      "value": "",
       "type": "default / dashed",
-      "description_zh": "线的类型"
+      "version": "2.26.1",
+      "required": false
     },
     "time": {
-      "value": "",
-      "description": "Option time",
+      "description": "选项时间",
+      "description_zh": "选项时间",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "选项时间"
+      "version": "",
+      "required": false
     },
     "title": {
-      "value": "",
-      "description": "Option title",
-      "default": "undefined",
-      "type": "string",
+      "description": "选项标题",
       "description_zh": "选项标题",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
       "required": true
     },
     "type": {
-      "value": [
-        "default",
-        "success",
-        "info",
-        "warning",
-        "error"
-      ],
-      "description": "Option type",
+      "description": "选项类型",
+      "description_zh": "选项类型",
       "default": "default",
+      "value": "",
       "type": "default / success / info / warning / error",
-      "description_zh": "选项类型"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/timeline",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/timeline"
+  "methods": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "时间线选项内容",
+      "description_zh": "时间线选项内容"
+    },
+    {
+      "name": "icon",
+      "description": "时间线选项自定义图标",
+      "description_zh": "时间线选项自定义图标"
+    },
+    {
+      "name": "footer",
+      "description": "时间线选项底部内容",
+      "description_zh": "时间线选项底部内容"
+    },
+    {
+      "name": "header",
+      "description": "时间线选项头部内容",
+      "description_zh": "时间线选项头部内容"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/timeline",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/timeline",
+  "filename": "TimelineItem",
+  "typeDetail": {}
 }

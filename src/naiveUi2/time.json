@@ -2,56 +2,66 @@
   "name": "NTime",
   "props": {
     "format": {
-      "value": "",
-      "description": "Time-formatted strings, see [format](https://date-fns.org/v2.23.0/docs/format) for details",
+      "description": "时间格式化字符串，详情见 format",
+      "description_zh": "时间格式化字符串，详情见 format",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "时间格式化字符串，详情见 [format](https://date-fns.org/v2.23.0/docs/format)"
+      "version": "",
+      "required": false
     },
     ":time": {
-      "value": "",
-      "description": "Time",
-      "default": "Date.now()",
-      "type": "number | Date",
+      "description": "时间",
       "description_zh": "时间",
+      "default": "Date.now()",
+      "value": "",
+      "type": "number | Date",
+      "version": "",
       "required": true
     },
     "time-zone": {
-      "value": "",
-      "description": "The urban areas used when formatting values follow the [iana time zones](https://www.iana.org/time-zones) format. You can use 'Intl.supportedValuesOf(timeZone)' to see which time zones are supported",
+      "description": "格式化值时使用的时区，遵循 iana time zones 格式。你可以使用 Intl.supportedValuesOf('timeZone') 来查看支持的时区",
+      "description_zh": "格式化值时使用的时区，遵循 iana time zones 格式。你可以使用 Intl.supportedValuesOf('timeZone') 来查看支持的时区",
       "default": "undefined",
-      "type": "string",
-      "description_zh": "格式化值时使用的市区，遵循 [iana time zones](https://www.iana.org/time-zones) 格式。你可以使用 `Intl.supportedValuesOf(timeZone)` 来查看支持的时区"
-    },
-    ":to": {
       "value": "",
-      "description": "Target time",
+      "type": "string",
+      "version": "2.30.0",
+      "required": false
+    },
+    "to": {
+      "description": "目标时间",
+      "description_zh": "目标时间",
       "default": "Date.now()",
+      "value": "",
       "type": "number | Date",
-      "description_zh": "目标时间"
+      "version": "",
+      "required": false
     },
     "type": {
-      "value": [
-        "relative",
-        "date",
-        "datetime"
-      ],
-      "description": "Time type",
+      "description": "时间类型",
+      "description_zh": "时间类型",
       "default": "datetime",
+      "value": "",
       "type": "relative / date / datetime",
-      "description_zh": "时间类型"
+      "version": "",
+      "required": false
     },
     "unix": {
-      "value": "",
-      "description": "UNIX timestamps",
+      "description": "unix 时间戳",
+      "description_zh": "unix 时间戳",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "unix 时间戳"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/time",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/time"
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/time",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/time",
+  "filename": "Time",
+  "typeDetail": {}
 }

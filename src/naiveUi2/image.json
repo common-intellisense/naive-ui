@@ -2,128 +2,175 @@
   "name": "NImage",
   "props": {
     "alt": {
-      "value": "",
-      "description": "Photo captions",
-      "default": "undefined",
-      "type": "string",
+      "description": "图片说明",
       "description_zh": "图片说明",
-      "required": true
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
+      "required": false
     },
     "fallback-src": {
-      "value": "",
-      "description": "The address that appears when the image fails to load",
+      "description": "图片加载失败时显示的地址",
+      "description_zh": "图片加载失败时显示的地址",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "图片加载失败时显示的地址"
+      "version": "",
+      "required": false
     },
     "height": {
-      "value": "",
-      "description": "Picture height",
+      "description": "图片高度",
+      "description_zh": "图片高度",
       "default": "undefined",
+      "value": "",
       "type": "string | number",
-      "description_zh": "图片高度"
+      "version": "",
+      "required": false
     },
     "img-props": {
-      "value": "",
-      "description": "The properties of the img element in the component",
+      "description": "组件中 img 元素的属性",
+      "description_zh": "组件中 img 元素的属性",
       "default": "undefined",
-      "type": "object",
-      "description_zh": "组件中 img 元素的属性"
+      "value": "",
+      "type": "ImgHTMLAttributes",
+      "version": "",
+      "required": false
     },
     "lazy": {
-      "value": "",
-      "description": "Whether to let the image enter the viewport and then load, use the property value that will be set to [HTMLImageElement.loading](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading); Lazy loading can also be implemented with the 'intersection-observer-options' configuration",
+      "description": "是否让图片进入视口再加载，单独使用将设置为HTMLImageElement.loading 的属性值；也可配合 intersection-observer-options 配置实现懒加载",
+      "description_zh": "是否让图片进入视口再加载，单独使用将设置为HTMLImageElement.loading 的属性值；也可配合 intersection-observer-options 配置实现懒加载",
       "default": "false",
-      "type": "boolean",
-      "description_zh": "是否让图片进入视口再加载，单独使用将设置为[HTMLImageElement.loading](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading) 的属性值；也可配合 `intersection-observer-options` 配置实现懒加载"
-    },
-    "intersection-observer-options": {
       "value": "",
-      "description": "'lazy=true' when the intersection observer observation",
+      "type": "boolean",
+      "version": "2.30.5",
+      "required": false
+    },
+    ":intersection-observer-options": {
+      "description": "lazy=true 时 intersection observer 观测的配置",
+      "description_zh": "lazy=true 时 intersection observer 观测的配置",
       "default": "undefined",
+      "value": "",
       "type": "{ root?: Element | Document | string | null, rootMargin?: string, threshold?: number | number[]; }",
-      "description_zh": "`lazy=true` 时 intersection observer 观测的配置"
+      "version": "2.30.5",
+      "required": false
     },
     "object-fit": {
-      "value": [
-        "fill",
-        "contain",
-        "cover",
-        "none",
-        "scale-down"
-      ],
-      "description": "The type of adaptation of the picture inside the container",
+      "description": "图片在容器内的的适应类型",
+      "description_zh": "图片在容器内的的适应类型",
       "default": "fill",
-      "type": "fill | contain | cover | none | scale-down",
-      "description_zh": "图片在容器内的的适应类型"
+      "value": "",
+      "type": "fill / contain / cover / none / scale-down",
+      "version": "",
+      "required": false
     },
     "preview-src": {
-      "value": "",
-      "description": "The image address of the preview image",
+      "description": "预览图片的图片地址",
+      "description_zh": "预览图片的图片地址",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "预览图片的图片地址"
+      "version": "",
+      "required": false
     },
     "preview-disabled": {
-      "value": "",
-      "description": "Whether to disable click image preview",
+      "description": "是否禁用单击图像预览",
+      "description_zh": "是否禁用单击图像预览",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否禁用单击图像预览"
+      "version": "",
+      "required": false
     },
     "previewed-img-props": {
-      "value": "",
-      "description": "The properties of the img element when previewing the image",
+      "description": "预览图片时 img 元素的属性",
+      "description_zh": "预览图片时 img 元素的属性",
       "default": "undefined",
-      "type": "object",
-      "description_zh": "预览图片时 img 元素的属性"
+      "value": "",
+      "type": "HTMLAttributes",
+      "version": "2.34.0",
+      "required": false
+    },
+    ":render-toolbar": {
+      "description": "工具栏的渲染函数",
+      "description_zh": "工具栏的渲染函数",
+      "default": "undefined",
+      "value": "",
+      "type": "(props: { nodes: { prev: VNode, next: VNode, rotateCounterclockwise: VNode, rotateClockwise: VNode, resizeToOriginalSize: VNode, zoomOut: VNode, zoomIn: VNode, download: VNode, close: VNode } }) => VNodeChild",
+      "version": "2.38.2",
+      "required": false
     },
     "show-toolbar": {
-      "value": "",
-      "description": "Whether to display the bottom toolbar after the image is enlarged",
+      "description": "图片放大后是否展示底部工具栏",
+      "description_zh": "图片放大后是否展示底部工具栏",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "图片放大后是否展示底部工具栏"
+      "version": "",
+      "required": false
     },
     "show-toolbar-tooltip": {
-      "value": "",
-      "description": "Whether or not to display toolbar prompts",
+      "description": "是否展示工具栏的提示",
+      "description_zh": "是否展示工具栏的提示",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否展示工具栏的提示"
+      "version": "2.24.0",
+      "required": false
     },
     "src": {
-      "value": "",
-      "description": "Image source",
-      "default": "undefined",
-      "type": "string",
+      "description": "图片来源",
       "description_zh": "图片来源",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
       "required": true
     },
     "width": {
-      "value": "",
-      "description": "Image width",
+      "description": "图片宽度",
+      "description_zh": "图片宽度",
       "default": "undefined",
+      "value": "",
       "type": "string | number",
-      "description_zh": "图片宽度"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [
     {
       "name": "error",
-      "description": "A callback that is executed if the image fails to load",
+      "description": "图片加载失败执行的回调",
+      "description_zh": "图片加载失败执行的回调",
       "params": "(e: Event) => void",
-      "description_zh": "图片加载失败执行的回调"
+      "version": ""
     },
     {
       "name": "load",
-      "description": "The callback that is executed after the image is loaded",
+      "description": "图片加载完成执行的回调",
+      "description_zh": "图片加载完成执行的回调",
       "params": "(e: Event) => void",
-      "description_zh": "图片加载完成执行的回调"
+      "version": ""
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/image",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/image"
+  "methods": [],
+  "slots": [
+    {
+      "name": "placeholder",
+      "description": "图像没有加载成功时候的占位",
+      "description_zh": "图像没有加载成功时候的占位",
+      "version": "2.30.5"
+    },
+    {
+      "name": "error",
+      "description": "图像加载失败时候的占位",
+      "description_zh": "图像加载失败时候的占位",
+      "version": "2.40.2"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/image",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/image",
+  "filename": "Image",
+  "typeDetail": {}
 }

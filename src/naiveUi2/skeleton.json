@@ -2,77 +2,84 @@
   "name": "NSkeleton",
   "props": {
     "text": {
-      "value": "",
-      "description": "Text skeleton",
+      "description": "文本骨架",
+      "description_zh": "文本骨架",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "文本骨架"
+      "required": false
     },
     "round": {
-      "value": "",
-      "description": "Rounded skeleton",
+      "description": "圆角骨架",
+      "description_zh": "圆角骨架",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "圆角骨架"
+      "required": false
     },
     "circle": {
-      "value": "",
-      "description": "Round skeleton",
+      "description": "圆形骨架",
+      "description_zh": "圆形骨架",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "圆形骨架"
+      "required": false
     },
     "height": {
-      "value": "",
-      "description": "Skeleton height",
+      "description": "骨架高度",
+      "description_zh": "骨架高度",
       "default": "undefined",
+      "value": "",
       "type": "string | number",
-      "description_zh": "骨架高度"
+      "required": false
     },
     "width": {
-      "value": "",
-      "description": "Skeleton width",
+      "description": "骨架宽度",
+      "description_zh": "骨架宽度",
       "default": "undefined",
+      "value": "",
       "type": "string | number",
-      "description_zh": "骨架宽度"
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "Skeleton size",
+      "description": "骨架大小",
+      "description_zh": "骨架大小",
       "default": "undefined",
-      "type": "small / medium / large",
-      "description_zh": "骨架大小"
-    },
-    ":repeat": {
       "value": "",
-      "description": "Number of repetitions",
-      "default": "1",
-      "type": "string | number",
+      "type": "small / medium / large",
+      "required": false
+    },
+    "repeat": {
+      "description": "重复次数",
       "description_zh": "重复次数",
-      "required": true
+      "default": "1",
+      "value": "",
+      "type": "string | number",
+      "required": false
     },
     "animated": {
-      "value": "",
-      "description": "Whether or not to enable animation",
+      "description": "是否启用动画",
+      "description_zh": "是否启用动画",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否启用动画"
+      "required": false
     },
     "sharp": {
-      "value": "",
-      "description": "Whether or not to display as a right-angled skeleton",
+      "description": "是否显示为直角骨架",
+      "description_zh": "是否显示为直角骨架",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示为直角骨架"
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/skeleton",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/skeleton"
+  "methods": [],
+  "slots": [],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/skeleton",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/skeleton",
+  "filename": "Skeleton",
+  "typeDetail": {}
 }

@@ -1,63 +1,110 @@
 {
   "name": "NSpin",
   "props": {
-    "description": {
-      "value": "",
-      "description": "Text message for Spin",
+    "content-class": {
+      "description": "Spin 内容的类名",
+      "description_zh": "Spin 内容的类名",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "Spin 的文字信息"
+      "version": "2.36.0",
+      "required": false
+    },
+    "content-style": {
+      "description": "Spin 内容的样式",
+      "description_zh": "Spin 内容的样式",
+      "default": "undefined",
+      "value": "",
+      "type": "string | Object",
+      "version": "2.36.0",
+      "required": false
+    },
+    "description": {
+      "description": "Spin 的文字信息",
+      "description_zh": "Spin 的文字信息",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "",
+      "required": false
     },
     "rotate": {
-      "value": "",
-      "description": "Customize the loading icon with or without a rotation animation",
+      "description": "自定义的加载图标是否有旋转动画",
+      "description_zh": "自定义的加载图标是否有旋转动画",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "自定义的加载图标是否有旋转动画"
+      "version": "",
+      "required": false
     },
     "size": {
-      "value": [
-        "small",
-        "medium",
-        "large"
-      ],
-      "description": "The size of the Spin",
+      "description": "Spin 的尺寸",
+      "description_zh": "Spin 的尺寸",
       "default": "medium",
+      "value": "",
       "type": "small / medium / large / number",
-      "description_zh": "Spin 的尺寸"
+      "version": "",
+      "required": false
     },
     "show": {
-      "value": "",
-      "description": "Whether the Spin is active or not when filling in the content, it does not take effect when the Spin is used directly",
+      "description": "在填入内容的情况下 Spin 是否激活，直接使用 Spin 时不生效",
+      "description_zh": "在填入内容的情况下 Spin 是否激活，直接使用 Spin 时不生效",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "在填入内容的情况下 Spin 是否激活，直接使用 Spin 时不生效"
+      "version": "",
+      "required": false
     },
     ":stroke-width": {
-      "value": "",
-      "description": "The relative width of the edge of the Spin, assuming the outer radius of the Spin is 100",
+      "description": "Spin 边缘的相对宽度，假定 Spin 的外侧半径是 100",
+      "description_zh": "Spin 边缘的相对宽度，假定 Spin 的外侧半径是 100",
       "default": "undefined",
+      "value": "",
       "type": "number",
-      "description_zh": "Spin 边缘的相对宽度，假定 Spin 的外侧半径是 100"
+      "version": "",
+      "required": false
     },
     "stroke": {
-      "value": "",
-      "description": "The color of the Spin",
+      "description": "Spin 的颜色",
+      "description_zh": "Spin 的颜色",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "Spin 的颜色"
+      "version": "",
+      "required": false
     },
     ":delay": {
-      "value": "",
-      "description": "Delay the time it takes to load the effect in milliseconds (to avoid flickering)",
+      "description": "延迟显示加载效果的时间, 单位为毫秒（避免闪烁）",
+      "description_zh": "延迟显示加载效果的时间, 单位为毫秒（避免闪烁）",
       "default": "undefined",
+      "value": "",
       "type": "number",
-      "description_zh": "延迟显示加载效果的时间, 单位为毫秒（避免闪烁）"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [],
-  "link": "https://www.naiveui.com/en-US/dark/components/spin",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/spin"
+  "methods": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "如果填入，Spin 会包裹填入的内容",
+      "description_zh": "如果填入，Spin 会包裹填入的内容"
+    },
+    {
+      "name": "description",
+      "description": "Spin 的文字信息",
+      "description_zh": "Spin 的文字信息"
+    },
+    {
+      "name": "icon",
+      "description": "自定义的加载图标",
+      "description_zh": "自定义的加载图标"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/spin",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/spin",
+  "filename": "Spin",
+  "typeDetail": {}
 }

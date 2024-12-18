@@ -1,130 +1,237 @@
 {
   "name": "NDialog",
   "props": {
-    "bordered": {
+    "action-class": {
+      "description": "操作区域的类名",
+      "description_zh": "操作区域的类名",
+      "default": "undefined",
       "value": "",
-      "description": "Whether or not to display the border",
+      "type": "string",
+      "version": "2.38.2",
+      "required": false
+    },
+    "action-style": {
+      "description": "操作区域的样式",
+      "description_zh": "操作区域的样式",
+      "default": "undefined",
+      "value": "",
+      "type": "Object | string",
+      "version": "2.38.2",
+      "required": false
+    },
+    "bordered": {
+      "description": "是否显示 border",
+      "description_zh": "是否显示 border",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否显示 border"
+      "version": "",
+      "required": false
     },
     "closable": {
-      "value": "",
-      "description": "Whether or not to display the 'close' icon",
+      "description": "是否显示 close 图标",
+      "description_zh": "是否显示 close 图标",
       "default": "true",
-      "type": "boolean",
-      "description_zh": "是否显示 `close` 图标"
-    },
-    "content": {
       "value": "",
-      "description": "The contents of the dialog, which can be a 'render' function",
+      "type": "boolean",
+      "version": "",
+      "required": false
+    },
+    ":content": {
+      "description": "对话框内容，可以是渲染函数",
+      "description_zh": "对话框内容，可以是渲染函数",
       "default": "undefined",
+      "value": "",
       "type": "string | (() => VNodeChild)",
-      "description_zh": "对话框内容，可以是 `render` 函数",
-      "required": true
+      "version": "",
+      "required": false
+    },
+    "content-class": {
+      "description": "内容的类名",
+      "description_zh": "内容的类名",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.38.2",
+      "required": false
+    },
+    "content-style": {
+      "description": "内容的样式",
+      "description_zh": "内容的样式",
+      "default": "undefined",
+      "value": "",
+      "type": "Object | string",
+      "version": "2.38.2",
+      "required": false
     },
     "icon-placement": {
-      "value": [
-        "left",
-        "top"
-      ],
-      "description": "The location where the icon is placed",
+      "description": "图标放置的位置",
+      "description_zh": "图标放置的位置",
       "default": "left",
-      "type": "left | top",
-      "description_zh": "图标放置的位置"
+      "value": "",
+      "type": "left / top",
+      "version": "",
+      "required": false
     },
     ":icon": {
-      "value": "",
-      "description": "It needs to be a 'render' function",
+      "description": "需要是渲染函数",
+      "description_zh": "需要是渲染函数",
       "default": "undefined",
+      "value": "",
       "type": "() => VNodeChild",
-      "description_zh": "需要是 `render` 函数"
+      "version": "",
+      "required": false
     },
     "loading": {
-      "value": "",
-      "description": "Whether or not to display a 'loading' status",
+      "description": "是否显示 loading 状态",
+      "description_zh": "是否显示 loading 状态",
       "default": "false",
-      "type": "boolean",
-      "description_zh": "是否显示 `loading` 状态"
-    },
-    ":negative-button-props": {
       "value": "",
-      "description": "Cancel the properties of the button",
+      "type": "boolean",
+      "version": "",
+      "required": false
+    },
+    "negative-button-props": {
+      "description": "取消按钮的属性",
+      "description_zh": "取消按钮的属性",
       "default": "undefined",
+      "value": "",
       "type": "ButtonProps",
-      "description_zh": "取消按钮的属性"
+      "version": "2.27.0",
+      "required": false
     },
     "negative-text": {
-      "value": "",
-      "description": "The text of the cancel button will not appear if the corresponding button is not filled",
+      "description": "取消按钮的文字，不填对应的按钮不会出现",
+      "description_zh": "取消按钮的文字，不填对应的按钮不会出现",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "取消按钮的文字，不填对应的按钮不会出现"
+      "version": "",
+      "required": false
     },
-    ":positive-button-props": {
-      "value": "",
-      "description": "Confirm the properties of the button",
+    "positive-button-props": {
+      "description": "确认按钮的属性",
+      "description_zh": "确认按钮的属性",
       "default": "undefined",
+      "value": "",
       "type": "ButtonProps",
-      "description_zh": "确认按钮的属性"
+      "version": "2.27.0",
+      "required": false
     },
     "positive-text": {
-      "value": "",
-      "description": "If you do not fill in the text of the button, the text of the button will not appear",
+      "description": "确认按钮的文字，不填对应的按钮不会出现",
+      "description_zh": "确认按钮的文字，不填对应的按钮不会出现",
       "default": "undefined",
+      "value": "",
       "type": "string",
-      "description_zh": "确认按钮的文字，不填对应的按钮不会出现"
+      "version": "",
+      "required": false
     },
     "show-icon": {
-      "value": "",
-      "description": "Whether to display the icon",
+      "description": "是否显示 icon",
+      "description_zh": "是否显示 icon",
       "default": "true",
-      "type": "boolean",
-      "description_zh": "是否显示 icon"
-    },
-    "title": {
       "value": "",
-      "description": "The title of the dialog, which can be a 'render' function",
+      "type": "boolean",
+      "version": "",
+      "required": false
+    },
+    ":title": {
+      "description": "对话框标题，可以是渲染函数",
+      "description_zh": "对话框标题，可以是渲染函数",
       "default": "undefined",
+      "value": "",
       "type": "string | (() => VNodeChild)",
-      "description_zh": "对话框标题，可以是 `render` 函数",
-      "required": true
+      "version": "",
+      "required": false
+    },
+    "title-class": {
+      "description": "标题的类名",
+      "description_zh": "标题的类名",
+      "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.38.2",
+      "required": false
+    },
+    "title-style": {
+      "description": "标题的样式",
+      "description_zh": "标题的样式",
+      "default": "undefined",
+      "value": "",
+      "type": "Object | string",
+      "version": "2.38.2",
+      "required": false
     },
     "type": {
-      "value": [
-        "error",
-        "success",
-        "warning",
-        "info"
-      ],
-      "description": "The type of dialog box",
+      "description": "对话框类型",
+      "description_zh": "对话框类型",
       "default": "warning",
+      "value": "",
       "type": "error / success / warning / info",
-      "description_zh": "对话框类型"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [],
-  "typeDetail": {},
   "events": [
     {
       "name": "close",
-      "description": "Click the callback function that was executed when closed",
+      "description": "点击关闭时执行的回调函数",
+      "description_zh": "点击关闭时执行的回调函数",
       "params": "() => void",
-      "description_zh": "点击关闭时执行的回调函数"
+      "version": ""
     },
     {
       "name": "negative-click",
-      "description": "The callback function that is executed when 'negative' is executed",
+      "description": "执行 negative 时执行的回调函数",
+      "description_zh": "执行 negative 时执行的回调函数",
       "params": "(e: MouseEvent) => void",
-      "description_zh": "执行 `negative` 时执行的回调函数"
+      "version": ""
     },
     {
       "name": "positive-click",
-      "description": "The callback function that is executed when 'positive' is executed",
+      "description": "执行 positive 时执行的回调函数",
+      "description_zh": "执行 positive 时执行的回调函数",
       "params": "(e: MouseEvent) => void",
-      "description_zh": "执行 `positive` 时执行的回调函数"
+      "version": ""
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/dialog",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/dialog"
+  "methods": [],
+  "slots": [
+    {
+      "name": "action",
+      "description": "action 内容",
+      "description_zh": "action 内容",
+      "version": ""
+    },
+    {
+      "name": "default",
+      "description": "对话框内容",
+      "description_zh": "对话框内容",
+      "version": ""
+    },
+    {
+      "name": "header",
+      "description": "header 内容",
+      "description_zh": "header 内容",
+      "version": ""
+    },
+    {
+      "name": "icon",
+      "description": "icon 内容",
+      "description_zh": "icon 内容",
+      "version": ""
+    },
+    {
+      "name": "close",
+      "description": "close 内容",
+      "description_zh": "close 内容",
+      "version": "2.36.0"
+    }
+  ],
+  "suggestions": [],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/dialog",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/dialog",
+  "filename": "Dialog",
+  "typeDetail": {}
 }

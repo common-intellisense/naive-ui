@@ -1,76 +1,111 @@
 {
   "name": "NLayout",
   "props": {
-    ":content-style": {
-      "value": "",
-      "description": "The style of the scrollable content node",
+    "content-class": {
+      "description": "可滚动内容节点的类名",
+      "description_zh": "可滚动内容节点的类名",
       "default": "undefined",
+      "value": "",
+      "type": "string",
+      "version": "2.36.0",
+      "required": false
+    },
+    "content-style": {
+      "description": "可滚动内容节点的样式",
+      "description_zh": "可滚动内容节点的样式",
+      "default": "undefined",
+      "value": "",
       "type": "string | Object",
-      "description_zh": "可滚动内容节点的样式"
+      "version": "",
+      "required": false
     },
     "embedded": {
-      "value": "",
-      "description": "Use a darker background color to show the embed effect, which only works on the bright theme",
+      "description": "使用更深的背景色展现嵌入效果，只对亮色主题生效",
+      "description_zh": "使用更深的背景色展现嵌入效果，只对亮色主题生效",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "使用更深的背景色展现嵌入效果，只对亮色主题生效"
+      "version": "",
+      "required": false
     },
     "has-sider": {
-      "value": "",
-      "description": "Whether there is a sidebar inside the component, if it is, must be set to true",
+      "description": "组件内部是否有边栏，如果有的话必须设为 true",
+      "description_zh": "组件内部是否有边栏，如果有的话必须设为 true",
       "default": "false",
+      "value": "",
       "type": "boolean",
-      "description_zh": "组件内部是否有边栏，如果有的话必须设为 true"
+      "version": "",
+      "required": false
     },
     "native-scrollbar": {
-      "value": "",
-      "description": "Whether or not to use the native scrollbar on its own. If set to 'false', 'Layout' will use a 'naive-ui' style scrollbar for the content",
+      "description": "是否在自身使用原生滚动条。如果设定为 false，Layout 将会对内容使用 naive-ui 风格的滚动条",
+      "description_zh": "是否在自身使用原生滚动条。如果设定为 false，Layout 将会对内容使用 naive-ui 风格的滚动条",
       "default": "true",
+      "value": "",
       "type": "boolean",
-      "description_zh": "是否在自身使用原生滚动条。如果设定为 `false`，`Layout` 将会对内容使用 `naive-ui` 风格的滚动条"
+      "version": "",
+      "required": false
     },
     "position": {
-      "value": "",
-      "description": "static mode will set CSS 'position' to 'static', 'absolute' mode will set CSS 'position' to 'absolute', and 'left', 'right', 'top', 'bottom' to '0'. The 'absolute' mode is useful when you want to keep the content in a fixed container or set the layout of the page to a fixed location. You may need to modify some styles to make sure it looks the way you want it to",
+      "description": "static 模式将会把 CSS position 设为 static，absolute 模式将会把 CSS position 设为 absolute，还将 left、right、top、bottom 设为 0。absolute 模式在你想将内容在一个固定容器或者将这个页面的布局设为固定位置的时候很有用。你可能需要修改一些 style 来确保它按照你预想的方式展示",
+      "description_zh": "static 模式将会把 CSS position 设为 static，absolute 模式将会把 CSS position 设为 absolute，还将 left、right、top、bottom 设为 0。absolute 模式在你想将内容在一个固定容器或者将这个页面的布局设为固定位置的时候很有用。你可能需要修改一些 style 来确保它按照你预想的方式展示",
       "default": "static",
+      "value": "",
       "type": "static / absolute",
-      "description_zh": "static 模式将会把 CSS `position` 设为 `static`，`absolute` 模式将会把 CSS `position` 设为 `absolute`，还将 `left`、`right`、`top`、`bottom` 设为 `0`。`absolute` 模式在你想将内容在一个固定容器或者将这个页面的布局设为固定位置的时候很有用。你可能需要修改一些 style 来确保它按照你预想的方式展示"
+      "version": "",
+      "required": false
     },
     "scrollbar-props": {
-      "value": "",
-      "description": "Attribute Reference [Scrollbar props](scrollbar#Scrollbar-Props)",
+      "description": "属性参考 Scrollbar props",
+      "description_zh": "属性参考 Scrollbar props",
       "default": "undefined",
-      "type": "object",
-      "description_zh": "属性参考 [Scrollbar props](scrollbar#Scrollbar-Props)"
+      "value": "",
+      "type": "ScrollbarProps",
+      "version": "",
+      "required": false
     },
     "sider-placement": {
-      "value": [
-        "left",
-        "right"
-      ],
-      "description": "Which side of the component collapse sidebar is on",
+      "description": "组件折叠侧边栏在哪一侧",
+      "description_zh": "组件折叠侧边栏在哪一侧",
       "default": "left",
+      "value": "",
       "type": "left / right",
-      "description_zh": "组件折叠侧边栏在哪一侧"
+      "version": "",
+      "required": false
     }
   },
-  "methods": [
-    {
-      "name": "scrollTo",
-      "description": "Scroll to somewhere",
-      "params": "((xCoord: number, yCoord: number) => void) | (options: { left?: number, top?: number, behavior: smooth | auto }) => void",
-      "description_zh": "滚动到某处"
-    }
-  ],
-  "typeDetail": {},
   "events": [
     {
       "name": "scroll",
-      "description": "A scrolling event callback function for the content",
+      "description": "内容的滚动事件回调函数",
+      "description_zh": "内容的滚动事件回调函数",
       "params": "(e: Event) => void",
-      "description_zh": "内容的滚动事件回调函数"
+      "version": ""
     }
   ],
-  "link": "https://www.naiveui.com/en-US/dark/components/layout",
-  "link_zh": "https://www.naiveui.com/zh-CN/dark/components/layout"
+  "methods": [
+    {
+      "name": "scrollTo",
+      "description": "滚动到某处",
+      "description_zh": "滚动到某处",
+      "params": "((xCoord: number, yCoord: number) => void) | (options: { left?: number, top?: number, behavior: 'smooth' | 'auto' }) => void"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default",
+      "description": "布局的内容",
+      "description_zh": "布局的内容"
+    }
+  ],
+  "suggestions": [
+    "n-layout-header",
+    "n-layout-sider",
+    "n-layout-content",
+    "n-layout-footer"
+  ],
+  "link": "https://www.naiveui.com/zh-CN/os-theme/components/layout#Layout,-Layout-Content,-Layout-Sider-Methods",
+  "link_zh": "https://www.naiveui.com/zh-CN/os-theme/components/layout#Layout,-Layout-Content,-Layout-Sider-Methods",
+  "filename": "Layout",
+  "typeDetail": {}
 }
